@@ -51,6 +51,7 @@ table {
 	border-spacing: 0;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 *{
     font-family: '微軟正黑體', sans-serif;
     //讓 ff fi不連在一起
@@ -87,9 +88,7 @@ html,body{
 }
 
 .container{
-    // background-color: rgb(172, 172, 172);
     max-width: 1680px;
-    // position: relative;
     margin: 0 auto;
 }
 
@@ -115,33 +114,41 @@ html,body{
 .block-fixed-right{
     position: absolute;
     right: 3%;
+    span{
+        opacity: 0;
+        color: rgb(140, 140, 140)
+    }
 }
 .page-mark{
-    border-left: 2px solid #fff;
+    border-left: 4px solid #fff;
     padding-left: 8px;
     color: #fff;
     font-size: 1.4rem;
+    margin-bottom: 1.2rem;
 }
 
 .block-top{
     background-image: url(../../img/TIHO_Web_Ingredient-47.png);
-    // height: 1240px;
     background-size: 100%;
-    background-position-y: 10%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
-    
 }
 .time-count{
     ul>li{
         display: inline-block;
         margin: 8% 2% 2%;
-        font-size: 2rem;
+        font-size: 2.2rem;
+        font-family: 'Roboto Condensed', sans-serif;
         text-align: center;
+        color: rgb(140, 140, 140);
+        &:last-child{
+            padding-left: 3%;
+            border-left: 1px solid rgb(140, 140, 140);
+        }
     }
-    span{
-        letter-spacing: 1.4rem;
+    h4{
+        letter-spacing: .2rem;
     }
     p{
         font-size: 1.2rem;
@@ -203,10 +210,9 @@ html,body{
     color: $mainColorRed
 }
 
-.video{
+.video-block{
     text-align: center;
     max-width: 1680px;
-    height: 1680px;
     background-color: #FDF4E7;
     background-attachment: fixed;
 }
@@ -244,9 +250,41 @@ html,body{
     background-image: url(../../img/TIHO_Web_Ingredient-49.png);
     background-attachment: initial;
     background-repeat: no-repeat;
+    background-position-y: 40%;
+    position: relative;
+    padding-bottom: 120px;
+}
+h4.title{
+    font-size: 1.8rem;
+    letter-spacing: 1.2rem;
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+}
+iframe{
+    width: 65%;
+    height: 680px;
+}
+.video-file{
+    img{
+        position: absolute;
+        &:nth-of-type(1){
+            bottom: 15%;
+            left: 2%;
+            width: 25%;
+            animation: float4 9s 0s infinite both;
+        }
+        &:nth-of-type(2){
+            top: 12%;
+            animation: float3 7s 0s infinite both;
+        }
+    }
 }
 
-
+@media (min-width:1680px){
+    .block-top{
+        background-size: 1680px;
+    }
+}
 @media (max-width:1280px){
     
 }
@@ -293,5 +331,25 @@ html,body{
     25%,75%{
         opacity: 1;
         transform: translate(-50%,5%);
+    }
+}
+@keyframes float3{
+    0%,50%,100%{
+        opacity: 1;
+        transform: translate(-7%,0%);
+    }
+    25%,75%{
+        opacity: 1;
+        transform: translate(7%,0%);
+    }
+}
+@keyframes float4{
+    0%,50%,100%{
+        opacity: 1;
+        transform: translate(-9%,0%);
+    }
+    25%,75%{
+        opacity: 1;
+        transform: translate(9%,0%);
     }
 }
