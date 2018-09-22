@@ -156,7 +156,8 @@ html,body{
         height: 1600px;
         img{
             left: 50%;
-            width: 60%;
+            width: 100%;
+            top: -20%;
             &:nth-child(1){
                 animation: float1 9s 0s infinite both;
             }
@@ -245,7 +246,13 @@ html,body{
 
 
 @media (max-width:1680px){
-    
+    .large-img{
+        .floating-word{
+            img{
+                top: -10%;
+            }
+    }
+    }
 }
 @media (max-width:1280px){
     
