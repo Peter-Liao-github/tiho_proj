@@ -15,7 +15,7 @@ $(window).scroll(function(){
 })
 
 $(function(){
-    $('.block-top').parallax('50%',0.8);
+    $('.block-top').parallax('50%',0.58);
     $('.video-opening img').parallax('50%',1);
     $('#opening-word').parallax('50%',0.1);
 
