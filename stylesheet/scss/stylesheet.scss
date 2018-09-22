@@ -88,7 +88,7 @@ html,body{
 
 .container{
     // background-color: rgb(172, 172, 172);
-    max-width: 1920px;
+    max-width: 1680px;
     // position: relative;
     margin: 0 auto;
 }
@@ -96,7 +96,7 @@ html,body{
 .block-fixed{
     position: fixed;
     width: 100%;
-    max-width: 1920px;
+    max-width: 1680px;
     z-index: 99;
     img{
         &:first-child{
@@ -119,7 +119,8 @@ html,body{
 .page-mark{
     border-left: 2px solid #fff;
     padding-left: 8px;
-
+    color: #fff;
+    font-size: 1.4rem;
 }
 
 .block-top{
@@ -157,7 +158,7 @@ html,body{
         img{
             left: 50%;
             width: 100%;
-            top: -20%;
+            top: -15%;
             &:nth-child(1){
                 animation: float1 9s 0s infinite both;
             }
@@ -185,14 +186,12 @@ html,body{
 }
 .dental-text{
     position: absolute;
-    top: 25%;
+    top: 28%;
     right: 11%;
-    letter-spacing: 1.6rem;
-    font-size: 2rem;
+    letter-spacing: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 900;
-    span{
-
-    }
+    opacity: 0;
 }
 .yellow{
     color: $mainColorYellow
@@ -206,7 +205,7 @@ html,body{
 
 .video{
     text-align: center;
-    max-width: 1920px;
+    max-width: 1680px;
     height: 1680px;
     background-color: #FDF4E7;
     background-attachment: fixed;
@@ -214,14 +213,13 @@ html,body{
 .video-opening{
     width: 100%;
     position: relative;
-    // background-color: #FDF4E7;
+    background-color: #FDF4E7;
     height: 800px;
     &>img{
         width: 100%;
         left: 0;
-        top: -70%;
+        top: -57%;
         position: absolute;
-        background-position-y: 561px;
     }
     h2{
         position: fixed;
@@ -242,18 +240,13 @@ html,body{
         // animation: fInOut 1.2s 0.2s 1 both;
     }
 }
-
-
-
-@media (max-width:1680px){
-    .large-img{
-        .floating-word{
-            img{
-                top: -10%;
-            }
-    }
-    }
+.video{
+    background-image: url(../../img/TIHO_Web_Ingredient-49.png);
+    background-attachment: initial;
+    background-repeat: no-repeat;
 }
+
+
 @media (max-width:1280px){
     
 }
