@@ -566,6 +566,9 @@ tbody{
 
     .video-opening{
         height: 350px;
+        img{
+            top: -100%;
+        }
     }
     .video{
         padding-bottom: 360px;
