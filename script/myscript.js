@@ -1,27 +1,56 @@
 $(window).scroll(function(){
-    if($(window).scrollTop()>90){
-        $('.ingredient img').animate({opacity: 0},700)
-    }
-    if ($(window).scrollTop()>900){
-        $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
-        $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
-        // $('.page-mark-1').css('color','black')
+    if($(window).width()>512){
+        if($(window).scrollTop()>90){
+            $('.ingredient img').animate({opacity: 0},700)
+        }
+        if ($(window).scrollTop()>900){
+            $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
+            $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
+            // $('.page-mark-1').css('color','black')
+        }
+        if ($(window).scrollTop()>1400){
+            $('.white-btn').css('opacity','0')
+            $('.black-btn').css('opacity','1')
+        }
     }
 
-    // if ($(window).scrollTop()>2400*($(window).width()/1680)){
-    // if ($(window).scrollTop()>2400){
-    //     $('iframe').animate({opacity: 1},700)
-    // } 
+    if($(window).width()<512){
+        if($(window).scrollTop()>30){
+            $('.ingredient img').animate({opacity: 0},700)
+        }
+        if ($(window).scrollTop()>1000){
+            $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
+            $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
+            // $('.page-mark-1').css('color','black')
+        }
+        if ($(window).scrollTop()>1400){
+            $('.white-btn').css('opacity','0')
+            $('.black-btn').css('opacity','1')
+        }
+    }
+
 })
 
 $(function(){
-    $('.block-top').parallax('50%',0.58);
-    $('.video-opening img').parallax('50%',1);
-    $('#opening-word').parallax('50%',0.1);
+    if ($(window).width()>512) {
+        $('.block-top').parallax('50%',0.58);
+        $('.video-opening img').parallax('50%',1);
+        $('#opening-word').parallax('50%',0.1);
+    } 
+
+    if ($(window).width()<512) {
+        $('.block-top').parallax('50%',0.5);
+        $('.video-opening img').parallax('50%',1);
+        $('#opening-word').parallax('50%',1);
+    }
 
     $('.block-top').mouseover(function () { 
         $('.floating-word').animate({opacity: 0},700)
         $('.dental-text').animate({opacity: 1},700)
+    });
+
+    $('iframe').click(function () { 
+        $('.video-file img:nth-of-type(1)').animate({left: '-9%'},1200)
     });
 })
 

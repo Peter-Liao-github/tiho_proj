@@ -24,7 +24,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	// font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -35,8 +35,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ul {
+    list-style: none;    
+    list-style-type: none;
 }
 blockquote, q {
 	quotes: none;
@@ -51,7 +52,7 @@ table {
 	border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 *{
     font-family: '微軟正黑體', sans-serif;
     //讓 ff fi不連在一起
@@ -64,9 +65,6 @@ body{
 }
 a:focus {
     outline: none;
-}
-ul{
-    list-style-type: none;
 }
 
 .text-shadow{
@@ -139,7 +137,6 @@ html,body{
         display: inline-block;
         margin: 8% 2% 2%;
         font-size: 2.2rem;
-        font-family: 'Roboto Condensed', sans-serif;
         text-align: center;
         color: rgb(140, 140, 140);
         &:last-child{
@@ -149,9 +146,11 @@ html,body{
     }
     h4{
         letter-spacing: .2rem;
+        font-family: 'Open Sans Condensed', sans-serif;
     }
     p{
         font-size: 1.2rem;
+        font-weight: 100;
     }
 }
 .large-img{
@@ -210,9 +209,11 @@ html,body{
     color: $mainColorRed
 }
 
-.video-block{
+.block{
     text-align: center;
     max-width: 1680px;
+}
+.video-block{
     background-color: #FDF4E7;
     background-attachment: fixed;
 }
@@ -240,9 +241,12 @@ html,body{
     position: fixed;
     top: 50%;
     left: 50%;
+    width: 80%;
+    max-width: 1344px;
     transform: translateX(-47%);
     img{
         opacity: 0;
+        width: 100%;
         // animation: fInOut 1.2s 0.2s 1 both;
     }
 }
@@ -255,8 +259,8 @@ html,body{
     padding-bottom: 120px;
 }
 h4.title{
-    font-size: 1.8rem;
-    letter-spacing: 1.2rem;
+    font-size: 1.4rem;
+    letter-spacing: 1rem;
     padding-top: 2rem;
     margin-bottom: 4rem;
 }
@@ -280,6 +284,217 @@ iframe{
     }
 }
 
+.about-block{
+    position: relative;
+    background-image: url(../../img/TIHO_Web_Ingredient-04.png);
+    padding-bottom: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &>img:first-child{
+        position: absolute;
+        left: 0;
+        top: 10%;
+        width: 80%;
+    }
+    h4{
+        padding-top: 4rem;
+    }
+}
+.about{
+    background-image: url(../../img/TIHO_Web_Ingredient-05.png);
+    width: 80%;
+    padding: 4%;
+    color: #fff;
+    margin: 0 auto;
+}
+.about-img{
+    img{
+        width: 10%;
+        padding: 4% 2%;
+    }
+}
+.about-text{
+    padding: 2%;
+    h3{
+        font-size: 2.7rem;
+        margin-bottom: 2rem
+    }
+    span{
+        border-bottom: 3px solid #fff;
+        padding-bottom: 1.2rem;
+    }
+}
+.content-p{
+    padding-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.question-block{
+    background-image: url(../../img/TIHO_Web_Ingredient-50.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 900px;
+    h4{
+        padding-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+.opt-dot{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(85, 85, 85);
+    background-color: rgb(187, 187, 187);
+    margin: 0 .4rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.option-text{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+    &>div{
+        display: inline-block;
+        font-size: 1.6rem;
+        padding: 0 2rem;
+    }
+    .devided-line{
+        border-right: 2px solid #000;
+        padding: 2px;
+        height: 20px;
+    }
+}
+.question-content{
+    text-align: center;
+    >div{
+        margin: 0 auto;
+        max-width: 50%;
+    }
+    .option-1{
+        display: none;
+    }
+    ol{
+        list-style: inside decimal;
+    }
+    li{
+        margin-bottom: 1.6rem;
+    }
+    .option-2{
+        line-height: 2.2rem;
+        letter-spacing: 0.2rem;
+        text-align: justify;
+    }
+}
+
+.compare-block{
+    // background-image: url(../../img/TIHO_Web_Ingredient-51.png);
+    background-color: #FDF4E7;
+    height: 900px;
+    img{
+        width: 100%;
+        max-width: 1680px;
+        position: relative;
+    }
+    h4{
+        margin-bottom: 2rem;
+    }
+}
+.compare-table{
+    width: fit-content;
+    margin: 6rem auto 0rem;
+    text-align-last: left;
+}
+thead{
+    th{
+        padding: 12px;
+    }
+}
+th{
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+tbody{
+    tr{
+        border-bottom: 1px solid #000;
+        &:last-child{
+            border: none;
+        }
+    }
+    th{
+        padding-left: 60px;
+        padding-right: 72px;
+    }
+    td{
+        font-size: 1.2rem;
+        padding: 24px 120px 24px 0px;
+    }
+}
+
+.rules-block{
+    background-image: url(../../img/TIHO_Web_Ingredient-10.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    padding-top: 20rem;
+    h4{
+        padding-top: 0rem;
+        margin-bottom: 6rem;
+    }
+    >img{
+        position: absolute;
+        width: 85%;
+        left: 50%;
+        opacity: .2;
+        transform: translateX(-50%);
+        top: -10%;
+    }
+}
+.d-row{
+    display: flex;
+    flex-direction: row;
+}
+.f-50{
+    flex: 50;
+}
+.pie-chart{
+    text-align: right;
+    position: relative;
+    img{
+        width: 65%;
+        padding-right: 2rem;
+        &:nth-child(2){
+            position: absolute;
+            width: 15%;
+            right: 2%;
+            top: 5%;
+        }
+        &:nth-child(3){
+            position: absolute;
+            width: 30%;
+            left: 25%;
+            top: 55%;
+        }
+    }
+}
+.rules-content{
+    >div{
+        margin: 0 auto;
+        width: 70%;
+        line-height: 2.2rem;
+        letter-spacing: 0.2rem;
+    }
+    .option-1{
+        display: none;
+    }
+    .option-2{
+        text-align: justify;
+    }
+}
+
 @media (min-width:1680px){
     .block-top{
         background-size: 1680px;
@@ -297,6 +512,88 @@ iframe{
     }
     .non-phone-appear{
         display: none;
+    }
+
+    .block-fixed{
+        img:nth-child(2),img:nth-child(3){
+            right: 5%;
+            width: 7%;
+            margin-top: 7%;
+        }
+    }
+
+    .block-top{
+        background-image: url(../../img/TIHO_Web_Ingredient-52.png);
+        background-size: 120%;
+        >img{
+            margin-top: 5rem;
+            width: 25%;
+        }
+    }
+    .dental-text{
+        top: 15%;
+        right: 5%;
+        letter-spacing: 0.2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .large-img{
+        .floating-word{
+            height: 1200px;
+            img{
+                top: 2%;
+            }
+        }
+        .ingredient{
+            img{
+                bottom: 65%;
+                height: 85%;
+            }
+        }
+    }
+    .time-count{
+        ul>li{
+            font-size: 2rem;
+            margin: 18% 3% 2%;
+            &:last-child{
+                padding-left: 6%;
+            }
+        }
+        p{
+            font-size: 0.8rem;
+        }
+    }
+
+    .video-opening{
+        height: 350px;
+    }
+    .video{
+        padding-bottom: 360px;
+        background-size: cover;
+    }
+    h4.title{
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.4em;
+    }
+    iframe{
+        height: 175px;
+        width: 85%;
+        position: relative;
+        top: 120px;
+    }
+    .video-file{
+        img{
+            &:nth-of-type(1){
+                bottom: -155%;
+                width: 55%;
+                left: 10%;
+            }
+            &:nth-of-type(2){
+                left: 80%;
+                width: 15%;
+            }
+        }
     }
 }
 @media (max-width:640px){
