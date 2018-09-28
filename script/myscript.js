@@ -18,12 +18,12 @@ $(window).scroll(function(){
         if($(window).scrollTop()>30){
             $('.ingredient img').animate({opacity: 0},700)
         }
-        if ($(window).scrollTop()>800){
+        if ($(window).scrollTop()>300){
             $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
             $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
             // $('.page-mark-1').css('color','black')
         }
-        if ($(window).scrollTop()>1400){
+        if ($(window).scrollTop()>350){
             $('.white-btn').css('opacity','0')
             $('.black-btn').css('opacity','1')
         }
@@ -39,7 +39,8 @@ $(function(){
     } 
 
     if ($(window).width()<512) {
-        $('.block-top').parallax('50%',0.2);
+        // $('.block-top').parallax('50%',0.2);
+        setInterval("$('.block-top').css('background-position-y', $(window).scrollTop()*(-0.6))",50)
         // $('.video-opening img').parallax('50%',1);
         setInterval("$('#opening-img-phone').css('top', $(window).scrollTop()*(-1.05))",50)
         $('#opening-word').parallax('50%',1);
