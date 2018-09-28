@@ -39,8 +39,8 @@ $(function(){
     } 
 
     if ($(window).width()<512) {
-        // $('.block-top').parallax('50%',0.2);
-        setInterval("$('.block-top').css('background-position-y', $(window).scrollTop()*(-0.6))",50)
+        $('.block-top').parallax('50%',0.2);
+        // setInterval("$('.block-top').css('background-position-y', $(window).scrollTop()*(-0.6))",50)
         // $('.video-opening img').parallax('50%',1);
         setInterval("$('#opening-img-phone').css('top', $(window).scrollTop()*(-1.05))",50)
         $('#opening-word').parallax('50%',1);
