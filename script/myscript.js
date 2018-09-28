@@ -40,7 +40,8 @@ $(function(){
 
     if ($(window).width()<512) {
         $('.block-top').parallax('50%',0.2);
-        $('.video-opening img').parallax('50%',1);
+        // $('.video-opening img').parallax('50%',1);
+        $('#opening-img-phone').css('top', $(window).scrollTop()*(-10))
         $('#opening-word').parallax('50%',1);
     }
 
