@@ -18,7 +18,7 @@ $(window).scroll(function(){
         if($(window).scrollTop()>30){
             $('.ingredient img').animate({opacity: 0},700)
         }
-        if ($(window).scrollTop()>1000){
+        if ($(window).scrollTop()>800){
             $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
             $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
             // $('.page-mark-1').css('color','black')
