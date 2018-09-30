@@ -85,8 +85,26 @@ $(function(){
         e.css('opacity',0)
             .animate({opacity: 1},500)
     }
-    //問答區切換
-    
+    //問答區切換,(i=active,j=another)
+    questionSwitch(1,2)
+    questionSwitch(2,1)
+    function questionSwitch(i,j) {
+        $('.question .option-'+i).click(function () {
+            $('.question .option-'+i).css('opacity',1)
+            $('.question .option-'+j).css('opacity',.4)
+            $('.question .opt-dot').css({
+                borderColor: '#555',
+                backgroundColor: '#bbb',
+            })
+            $('.question-content .option-'+j+'.content-p').css('display','none')
+            $('.question #option-'+i).css({
+                borderColor: '#bbb',
+                backgroundColor: '#555',
+            })
+            $('.question-content .option-'+i+'.content-p').css('display','block')
+            hoverShow($('.question-content .option-'+i+'.content-p'))
+        })
+    }
 })
 
 window.sr = ScrollReveal({ 
