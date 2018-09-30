@@ -342,6 +342,7 @@ iframe{
     background-image: url(../../img/TIHO_Web_Ingredient-50.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-x: center;
     height: 900px;
     h4{
         padding-top: 3rem;
@@ -413,12 +414,18 @@ iframe{
         width: 100%;
         max-width: 1680px;
         position: absolute;
-        height: 20%;
+        height: 35%;
         left: 0;
-        top: -19%;
+        top: -12%;
     }
     h4{
         margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+    p{
+        position: relative;
+        z-index: 1;
     }
 }
 .compare-table{
@@ -459,7 +466,7 @@ tbody{
     background-repeat: no-repeat;
     color: #fff;
     position: relative;
-    padding-top: 20rem;
+    padding-top: 16rem;
     padding-bottom: 10rem;
     h4{
         padding-top: 0rem;
@@ -467,11 +474,17 @@ tbody{
     }
     >img{
         position: absolute;
-        width: 85%;
-        left: 50%;
-        opacity: .2;
         transform: translateX(-50%);
-        top: -20%;
+        &:first-child{
+            width: 85%;
+            left: 50%;
+            opacity: .2;
+            top: -20%;
+        }
+        &:nth-child(2){
+            width: 100%;
+            top: -67%;
+        }
     }
     .option-text{
         width: 97%;
@@ -523,15 +536,48 @@ tbody{
 }
 
 @media (min-width:1680px){
+    .block-fixed{
+        img{
+            &:nth-child(2),&:nth-child(3){
+                left: 1580px;
+            }
+        }
+    }
+
     .block-top{
         background-size: 1680px;
     }
+
+    .question-block{
+        background-position-y: 105%;
+    }
+    
+    .rules-block{
+        >img{
+            &:nth-child(2){
+                top: -37%;
+                height: 40%;
+            }
+        }
+    }
 }
 @media (max-width:1280px){
-    
+    .rules-block{
+        >img{
+            &:nth-child(2){
+                top: -55%;
+            }
+        }
+    }
 }
 @media (max-width:1024px){
-    
+    .rules-block{
+        >img{
+            &:nth-child(2){
+                top: -39%;
+            }
+        }
+    }
 }
 @media (max-width:768px){
     .phone-appear{
