@@ -18,12 +18,12 @@ $(window).scroll(function(){
         if($(window).scrollTop()>30){
             $('.ingredient img').animate({opacity: 0},700)
         }
-        if ($(window).scrollTop()>300){
+        if ($(window).scrollTop()>350){
             $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
             $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
             // $('.page-mark-1').css('color','black')
         }
-        if ($(window).scrollTop()>350){
+        if ($(window).scrollTop()>400){
             $('.white-btn').css('opacity','0')
             $('.black-btn').css('opacity','1')
         }
@@ -32,6 +32,7 @@ $(window).scroll(function(){
 })
 
 $(function(){
+    //視差
     if ($(window).width()>512) {
         $('.block-top').parallax('50%',0.58);
         $('.video-opening img').parallax('50%',1);
@@ -45,14 +46,47 @@ $(function(){
         $('#opening-word').parallax('50%',1);
     }
 
+    //頂部區漂浮文字消失切換
     $('.block-top').mouseover(function () { 
         $('.floating-word').animate({opacity: 0},700)
         $('.dental-text').animate({opacity: 1},700)
     });
 
+    //影片區球體左移
     $('iframe').click(function () { 
         $('.video-file img:nth-of-type(1)').animate({left: '-9%'},1200)
     });
+
+    //關於區圖文切換
+    var aboutImgOrigin = ['img/TIHO_Web_Ingredient-22.png','img/TIHO_Web_Ingredient-23.png','img/TIHO_Web_Ingredient-24.png','img/TIHO_Web_Ingredient-25.png']
+    var aboutImg = ['img/TIHO_Web_Ingredient-26.png','img/TIHO_Web_Ingredient-27.png','img/TIHO_Web_Ingredient-28.png','img/TIHO_Web_Ingredient-29.png']
+    var aboutTextTitle = ['h3-title-1','h3-title-2','h3-title-3','h3-title-4']
+    var aboutTextP = ['Lorem-1, ipsum dolor sit amet consectetur adipisicing elit. Velit officiis, nostrum, perferendis corporis totam quae minima doloribus dolores est libero officia labore aliquam, voluptatibus dignissimos eligendi id deleniti ea repellat?','Lorem-2, ipsum dolor sit amet consectetur adipisicing elit. Velit officiis, nostrum, perferendis corporis totam quae minima doloribus dolores est libero officia labore aliquam, voluptatibus dignissimos eligendi id deleniti ea repellat?','Lorem-3, ipsum dolor sit amet consectetur adipisicing elit. Velit officiis, nostrum, perferendis corporis totam quae minima doloribus dolores est libero officia labore aliquam, voluptatibus dignissimos eligendi id deleniti ea repellat?','Lorem-4, ipsum dolor sit amet consectetur adipisicing elit. Velit officiis, nostrum, perferendis corporis totam quae minima doloribus dolores est libero officia labore aliquam, voluptatibus dignissimos eligendi id deleniti ea repellat?']
+    
+    for (let i = 1; i < aboutImg.length+1; i++) {
+        $('img.about-'+i).click(function () {
+            hoverChange(i,4)
+        })
+    }
+
+    function hoverChange(i,j) {
+        for (let k = 1; k <= j; k++) {
+            $('img.about-'+k).attr('src',aboutImgOrigin[k-1])
+        }
+        
+        $('img.about-'+i).attr('src',aboutImg[i-1])
+        hoverShow($('img.about-'+i))
+        $('.about-text>h3>span').text(aboutTextTitle[i-1])
+        hoverShow($('.about-text>h3>span'))
+        $('.about-text>p').text(aboutTextP[i-1])
+        hoverShow($('.about-text>p'))
+    }
+    function hoverShow(e) {
+        e.css('opacity',0)
+            .animate({opacity: 1},500)
+    }
+    //問答區切換
+    
 })
 
 window.sr = ScrollReveal({ 
