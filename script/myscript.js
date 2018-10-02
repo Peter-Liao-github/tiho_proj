@@ -1,7 +1,11 @@
 $(window).scroll(function(){
+    //scrollTop觸發
     if($(window).width()>512){
         if($(window).scrollTop()>90){
             $('.ingredient img').animate({opacity: 0},700)
+        }
+        if($(window).scrollTop()>300){
+            $('.ingredient img').css('display','none')
         }
         if ($(window).scrollTop()>900){
             $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
@@ -85,26 +89,40 @@ $(function(){
         e.css('opacity',0)
             .animate({opacity: 1},500)
     }
+
     //問答區切換,(i=active,j=another)
-    questionSwitch(1,2)
-    questionSwitch(2,1)
-    function questionSwitch(i,j) {
-        $('.question .option-'+i).click(function () {
-            $('.question .option-'+i).css('opacity',1)
-            $('.question .option-'+j).css('opacity',.4)
-            $('.question .opt-dot').css({
+    blockInnerSwitch('question',1,2)
+    blockInnerSwitch('question',2,1)
+
+    function blockInnerSwitch(t,i,j) {
+        $('.'+t+' .option-'+i).click(function () {
+            innerSwitch(t,i,j)
+        })
+        $('#'+t+'-'+i).click(function () {
+            innerSwitch(t,i,j)
+        })
+        function innerSwitch(t,i,j) {
+            $('.'+t+' .option-'+i).css('opacity',1)
+            $('.'+t+' .option-'+j).css('opacity',.4)
+            $('.'+t+' .opt-dot').css({
                 borderColor: '#555',
                 backgroundColor: '#bbb',
             })
-            $('.question-content .option-'+j+'.content-p').css('display','none')
-            $('.question #option-'+i).css({
+            $('.'+t+'-content .option-'+j+'.show-content').css('display','none')
+            $('.'+t+' .opt-dot:nth-child('+i+')').css({
                 borderColor: '#bbb',
                 backgroundColor: '#555',
             })
-            $('.question-content .option-'+i+'.content-p').css('display','block')
-            hoverShow($('.question-content .option-'+i+'.content-p'))
-        })
+            $('.'+t+'-content .option-'+i+'.show-content').css('display','block')
+            hoverShow($('.'+t+'-content .option-'+i+'.show-content'))
+        }
     }
+    //比較區切換
+    blockInnerSwitch('compare',1,2)
+    blockInnerSwitch('compare',2,1)
+    //團隊區切換
+    blockInnerSwitch('team',1,2)
+    blockInnerSwitch('team',2,1)
 })
 
 window.sr = ScrollReveal({ 

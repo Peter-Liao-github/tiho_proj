@@ -96,6 +96,7 @@ html,body{
 }
 
 .container{
+    background-color: #FDF4E7;
     max-width: 1680px;
     margin: 0 auto;
 }
@@ -195,8 +196,9 @@ html,body{
     .ingredient img{
         left: 0;
         width: 100%;
-        bottom: 50%;
+        bottom: 0%;
         height: 110%;
+        position: fixed;
     }
 }
 .dental-text{
@@ -269,13 +271,13 @@ html,body{
 }
 h4.title{
     font-size: 1.4rem;
-    letter-spacing: 1rem;
+    letter-spacing: .6rem;
     padding-top: 2rem;
     margin-bottom: 4rem;
 }
 iframe{
     width: 65%;
-    height: 680px;
+    height: 500px;
 }
 .video-file{
     img{
@@ -311,6 +313,7 @@ iframe{
 }
 .about{
     background-image: url(../../img/TIHO_Web_Ingredient-05.png);
+    background-size: cover;
     width: 80%;
     padding: 4%;
     color: #fff;
@@ -360,7 +363,7 @@ iframe{
     &:hover{
         cursor: pointer;
     }
-    &#option-1{
+    &#question-1,&#compare-1,&#team-1{
         border-color: #bbb;
         background-color: #555;
     }
@@ -385,9 +388,6 @@ iframe{
     >div{
         margin: 0 auto;
         max-width: 50%;
-    }
-    .option-1{
-        
     }
     ol{
         list-style: inside decimal;
@@ -431,7 +431,7 @@ iframe{
 .compare-table{
     width: fit-content;
     margin: 6rem auto 0rem;
-    text-align-last: left;
+    text-align: left;
 }
 thead{
     th{
@@ -445,7 +445,7 @@ th{
 }
 tbody{
     tr{
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #bbb;
         &:last-child{
             border: none;
         }
@@ -525,13 +525,118 @@ tbody{
         margin: 0 auto;
         width: 70%;
         line-height: 2.2rem;
-        letter-spacing: 0.2rem;
+        letter-spacing: 1px;
         text-align: left;
         padding-top: 20px;
         padding-bottom: 20px;
     }
     .option-1{
         border-bottom: 1px solid #fff;
+    }
+}
+
+.map-block{
+    background-image: url(../../img/TIHO_Web_Ingredient-06.png);
+    background-position-y: 200%;
+    background-repeat: no-repeat;
+    padding: 2rem 0 4rem;
+}
+.map-bgi{
+    width: 85%;
+    margin: auto;
+    background-image: url(../../img/TIHO_Web_Ingredient-33.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 50%;
+    text-align: center;
+    img{
+        transform: scale(0.85);
+        position: relative;
+        left: 2%;
+    }
+}
+
+.team-block{
+    h4{
+        margin-bottom: 2rem;
+    }
+    .option-text{
+        margin-bottom: 0;
+        .option-1{
+            padding-left: 0.8rem;
+        }
+    }
+    .team-content{
+        position: relative;
+        .content-p{
+            width: 80%;
+            margin: auto;
+            height: 480px;
+            overflow-y: scroll;
+            padding-top: 0;
+            margin-top: 1.6rem;
+        }
+        .option-2{
+            display: none;
+        }
+        >img{
+            position: absolute;
+            bottom: -5px;
+            height: 180px;
+            width: 100%;
+            transform: translateX(-50%);
+        }
+    }
+    .thum{
+        width: 12%;
+        display: inline-block;
+        padding: 12px;
+        img{
+            width: 100%;
+        }
+    }
+    .empty-height{
+        height: 100px;
+    }
+}
+
+.bottom-block{
+    position: relative;
+    >div{
+        h4{
+            letter-spacing: 1px;
+            width: 70%;
+            margin: 32px auto 40px;
+        }
+        >img{
+            width: 100%;
+            margin-top: -17%;
+        }
+    }
+}
+footer{
+    position: absolute;
+    bottom: 2rem;
+    color: #fff;
+    width: 100%;
+    >div{
+        justify-content: space-between;
+        margin: 0 4%;
+    }
+}
+.email{
+    letter-spacing: 2px;
+    margin: auto 0;
+    img{
+        vertical-align: middle;
+        width: 30px;
+        padding: 0 20px;
+    }
+}
+.icon{
+    img{
+        width: 48px;
+        margin-left: 20px;
     }
 }
 
@@ -548,6 +653,10 @@ tbody{
         background-size: 1680px;
     }
 
+    iframe{
+        height: 600px;
+    }
+
     .question-block{
         background-position-y: 105%;
     }
@@ -561,13 +670,33 @@ tbody{
             }
         }
     }
+
+    .team-block{
+        .team-content{
+            .content-p{
+                width: 75%;
+            }
+        }
+    }
 }
 @media (max-width:1280px){
+    iframe{
+        height: 480px;
+    }
     .rules-block{
         >img{
             &:nth-child(2){
                 top: -55%;
             }
+        }
+    }
+
+    .map-bgi{
+        img{
+            transform: scale(0.75);
+            position: relative;
+            left: -2%;
+            bottom: 45px;
         }
     }
 }
@@ -590,9 +719,10 @@ tbody{
 
     .block-fixed{
         img:nth-child(2),img:nth-child(3){
-            right: 5%;
-            width: 7%;
-            margin-top: 7%;
+            left: 86vw;
+            width: 30px;
+            margin-top: 20px;
+
         }
     }
 
@@ -652,7 +782,9 @@ tbody{
     h4.title{
         font-size: 1rem;
         font-weight: 400;
-        letter-spacing: 0.4em;
+        letter-spacing: 3px;
+        padding-top: 32px;
+        margin-bottom: 40px;
     }
     iframe{
         height: 175px;
@@ -671,6 +803,152 @@ tbody{
                 left: 80%;
                 width: 15%;
             }
+        }
+    }
+
+    .about{
+        width: 72%;
+    }
+    .about-img{
+        width: 70%;
+        margin: auto;
+        img{
+            width: 40%;
+        }
+    }
+    .about-text{
+        padding: 32px 12px;
+        h3{
+            font-size: 26px;
+            font-weight: 400;
+        }
+    }
+
+    .content-p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: left;
+        line-height: 1.1rem;
+    }
+    .option-text{
+        >div{
+            font-size: 20px;
+            padding: 0 12px 0 20px;
+        }
+        .devided-line{
+            height: 14px;
+        }
+    }
+
+    .question-block{
+        background-image: url(../../img/TIHO_Web_Ingredient-54-1.png);
+    }
+    .question-content{
+        >div{
+            max-width: 80%;
+        }
+        .content-p{
+            line-height: 1.1rem;
+            &.option-1{
+                margin-right: 12px;
+            }
+        }
+        ol{
+            list-style-position: outside;
+        }
+    }
+
+    .compare-block{
+        position: relative;
+        z-index: 1;
+        height: 650px;
+        .phone-appear{
+            position: relative;
+            z-index: 1;
+        }
+        .option-text{
+            letter-spacing: 1px;
+            >div:first-child{
+                margin-left: 15.5vw;
+            }
+        }
+        >div:last-child{
+            width: 75%;
+            margin: auto;
+            text-align: left;
+        }
+    }
+    .compare-table{
+        position: relative;
+        z-index: 1;
+        width: 80%;
+        margin: 32px auto;
+        text-align: left;
+        .option-2{
+            display: none;
+        }
+        th{
+            padding-left: 20px;
+            padding-right: 24px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+        td{
+            font-size: 14px;
+            padding: 20px 8px 10px 0px;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+    }
+
+    .rules-block{
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+        >img{
+            &:nth-child(2){
+                top: -140px;
+                height: 150px;
+                z-index: 1;
+            }
+            &:nth-child(3){
+                opacity: 0.2;
+                z-index: 1;
+                top: -12%;
+                width: 100vw;
+            }
+        }
+        .d-sm-col-reverse{
+            flex-direction: column-reverse;
+        }
+        .f-sm-100{
+            flex: 100;
+        }
+        .option-text{
+            margin-top: 0;
+        }
+        li{
+            margin-bottom: 12px;
+        }
+    }
+    .rules-content{
+        .content-p{
+            line-height: 1rem;
+            width: 80%;
+            letter-spacing: 1px;
+        }
+    }
+    .pie-chart img{
+        width: 75%;
+        padding-right: 3rem;
+        &:nth-child(3){
+            left: 10%;
+        }
+    }
+
+    .team{
+        .thum{
+            width: 24%;
         }
     }
 }
