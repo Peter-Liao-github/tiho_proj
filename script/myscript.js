@@ -1,5 +1,18 @@
 $(window).scroll(function(){
     //scrollTop觸發
+
+    var winScrollH = $(window).scrollTop();
+    var windowH = $(window).height();
+    var docH = $(document).height();
+    var scrolled = (winScrollH / (docH - windowH)) * 10;
+    console.log(scrolled);
+
+    if (scrolled >0.07){
+        $('.ingredient img').animate({opacity: 0},700)
+    }
+    if (scrolled >0.7){
+        $('.ingredient img').css('display','none')
+    }
     // if($(window).width()>512){
     //     if($(window).scrollTop()>90){
     //         $('.ingredient img').animate({opacity: 0},700)
