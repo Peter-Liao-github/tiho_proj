@@ -1,54 +1,53 @@
 $(window).scroll(function(){
     //scrollTop觸發
-    if($(window).width()>512){
-        if($(window).scrollTop()>90){
-            $('.ingredient img').animate({opacity: 0},700)
-        }
-        if($(window).scrollTop()>300){
-            $('.ingredient img').css('display','none')
-        }
-        if ($(window).scrollTop()>900){
-            $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
-            $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
-            // $('.page-mark-1').css('color','black')
-        }
-        if ($(window).scrollTop()>1400){
-            $('.white-btn').css('opacity','0')
-            $('.black-btn').css('opacity','1')
-        }
-    }
+    // if($(window).width()>512){
+    //     if($(window).scrollTop()>90){
+    //         $('.ingredient img').animate({opacity: 0},700)
+    //     }
+    //     if($(window).scrollTop()>300){
+    //         $('.ingredient img').css('display','none')
+    //     }
+    //     if ($(window).scrollTop()>900){
+    //         $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
+    //         $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
+    //         // $('.page-mark-1').css('color','black')
+    //     }
+    //     if ($(window).scrollTop()>1400){
+    //         $('.white-btn').css('opacity','0')
+    //         $('.black-btn').css('opacity','1')
+    //     }
+    // }
 
-    if($(window).width()<512){
-        if($(window).scrollTop()>30){
-            $('.ingredient img').animate({opacity: 0},700)
-        }
-        if ($(window).scrollTop()>350){
-            $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
-            $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
-            // $('.page-mark-1').css('color','black')
-        }
-        if ($(window).scrollTop()>400){
-            $('.white-btn').css('opacity','0')
-            $('.black-btn').css('opacity','1')
-        }
-    }
+    // if($(window).width()<512){
+    //     if($(window).scrollTop()>30){
+    //         $('.ingredient img').animate({opacity: 0},700)
+    //     }
+    //     if ($(window).scrollTop()>350){
+    //         $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
+    //         $('.page-mark-1').css('border-left-color','rgb(140, 140, 140)')
+    //         // $('.page-mark-1').css('color','black')
+    //     }
+    //     if ($(window).scrollTop()>400){
+    //         $('.white-btn').css('opacity','0')
+    //         $('.black-btn').css('opacity','1')
+    //     }
+    // }
 
 })
 
 $(function(){
     //視差
-    if ($(window).width()>512) {
-        $('.block-top').parallax('50%',0.58);
-        $('.video-opening img').parallax('50%',1);
-        $('#opening-word').parallax('50%',0.1);
-    } 
+    // if ($(window).width()>512) {
+    //     $('.block-top').parallax('50%',0.58);
+    //     $('.video-opening img').parallax('50%',1);
+    //     $('#opening-word').parallax('50%',0.1);
+    // } 
 
-    if ($(window).width()<512) {
-        $('.block-top').parallax('50%',0.2);
-        // $('.video-opening img').parallax('50%',1);
-        setInterval("$('#opening-img-phone').css('top', $(window).scrollTop()*(-1.05))",50)
-        $('#opening-word').parallax('50%',1);
-    }
+    // if ($(window).width()<512) {
+    //     $('.block-top').parallax('50%',0.2);
+    //     setInterval("$('#opening-img-phone').css('top', $(window).scrollTop()*(-1.05))",50)
+    //     $('#opening-word').parallax('50%',1);
+    // }
 
     //頂部區漂浮文字消失切換
     $('.block-top').mouseover(function () { 

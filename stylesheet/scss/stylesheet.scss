@@ -139,7 +139,7 @@ html,body{
     background-image: url(../../img/TIHO_Web_Ingredient-47.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     text-align: center;
 }
 .time-count{
@@ -194,11 +194,13 @@ html,body{
 
     }
     .ingredient img{
-        left: 0;
+        left: 50%;
         width: 100%;
+        max-width: 1680px;
         bottom: 0%;
-        height: 110%;
+        height: 20%;
         position: fixed;
+        transform: translateX(-50%);
     }
 }
 .dental-text{
@@ -226,7 +228,7 @@ html,body{
 }
 .video-block{
     background-color: #FDF4E7;
-    background-attachment: fixed;
+    // background-attachment: fixed;
 }
 .video-opening{
     width: 100%;
@@ -263,7 +265,7 @@ html,body{
 }
 .video{
     background-image: url(../../img/TIHO_Web_Ingredient-49.png);
-    background-attachment: initial;
+    // background-attachment: initial;
     background-repeat: no-repeat;
     background-position-y: 40%;
     position: relative;
@@ -608,6 +610,7 @@ tbody{
             letter-spacing: 1px;
             width: 70%;
             margin: 32px auto 40px;
+            position: relative;
         }
         >img{
             width: 100%;
@@ -731,6 +734,7 @@ footer{
         background-image: url(../../img/TIHO_Web_Ingredient-52.png);
         background-size: 120%;
         height: 950px;
+        background-position-x: center;
         >img{
             margin-top: 5rem;
             width: 25%;
@@ -750,12 +754,7 @@ footer{
                 top: 2%;
             }
         }
-        .ingredient{
-            img{
-                bottom: 65%;
-                height: 85%;
-            }
-        }
+        
     }
     .time-count{
         ul>li{
@@ -947,11 +946,42 @@ footer{
         }
     }
 
+    .map-block{
+        background-position-y: -100vh;
+    }
+    .map-bgi{
+        background-image: url(../../img/TIHO_Web_Ingredient-54-phone.png);
+        background-size: 150%;
+        width: 100%;
+        img{
+            transform: scale(1);
+            width: 90%;
+            top: 45px;
+            margin-bottom: 150px;
+        }
+    }
+    
     .team{
         .thum{
             width: 25%;
             padding: 6px;
         }
+    }
+
+    .d-sm-col{
+        flex-direction: column;
+    }
+    .email {
+        margin-bottom: 24px;
+        p{
+            font-size: 14px;
+        }
+        img{
+            width: 24px;
+        }
+    }
+    .icon img{
+        width: 36px;
     }
 }
 @media (max-width:640px){
