@@ -24,8 +24,9 @@
     <div class="container">
         <div class="block-fixed">
             <img src="img/TIHO_Web_Ingredient-12.png" class="non-phone-appear" alt="">
-            <img src="img/TIHO_Web_Ingredient-41.png" class="white-btn h-cursor-pointer" alt="">
-            <img src="img/TIHO_Web_Ingredient-42.png" class="op0 black-btn h-cursor-pointer" alt="">
+            <img src="img/TIHO_Web_Ingredient-41.png" class="white-btn h-cursor-pointer menu-btn" alt="">
+            <img src="img/TIHO_Web_Ingredient-42.png" class="op0 black-btn h-cursor-pointer menu-btn" alt="">
+            <!-- <img src="img/block10_X.png" class="close-btn menu" alt=""> -->
             <!-- <img src="img/TIHO_Web_Ingredient-18.png" class="op0 black-btn" alt=""> -->
             <!-- <img src="img/TIHO_Web_Ingredient-20.png" class="op0 white-btn" alt=""> -->
             <!-- <div class="block-fixed-right non-phone-appear">
@@ -37,6 +38,22 @@
                 <div class="page-mark page-mark-6"><span>6</span></div>
                 <div class="page-mark page-mark-7"><span>7</span></div>
             </div> -->
+            <div class="menu">
+                <ul id="menu">
+                    <li><a href="#a-video">Video</a></li>
+                    <li><a href="#a-about">About TIHO Token</a></li>
+                    <li><a href="#a-problem">Problem</a></li>
+                    <li><a href="#a-comparison">Comparison</a></li>
+                    <li><a href="#a-rules">Rules of Selling Token</a></li>
+                    <li><a href="#a-map">Roadmap</a></li>
+                    <li><a href="#a-team">Team</a></li>
+                    <li class="lang">Language<br />
+                    <a href="#">CH</a>
+                    <a href="#">EN</a>
+                    <a href="#">KO</a>
+                    <a href="#">JP</a></li>
+                </ul>
+            </div>
         </div>
         <div class="block-top">
             <img src="img/TIHO_Web_Ingredient-53.png" class="phone-appear" alt="">
@@ -65,15 +82,15 @@
                     <span class="yellow">I</span><span class="green">M</span><span class="yellow">P</span><span class="green">L</span><span class="green">A</span><span class="red">N</span><span class="red">T</span>
                 </div>
             </div>
-        </div>
-        <div class="video-block block">
-            <div class="video-opening">
+            <div class="opening">
                 <img id="opening-img" src="img/TIHO_Web_Ingredient-03.png" class="non-phone-appear" alt="">
                 <img id="opening-img-phone" src="img/TIHO_Web_Ingredient-03-1-01.png" class="phone-appear" alt="">
                 <div class="opening-word-div">
                     <img id="opening-word" src="img/TIHO_Web_Ingredient-48.png" alt="">
                 </div>
             </div>
+        </div>
+        <div class="video-block block" id="a-video">
             <div class="video">
                 <h4 class="title">video</h4>
                 <div class="video-file appear">
@@ -87,7 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="about-block block">
+        <div class="about-block block" id="a-about">
             <h4 class="title appear">About TIHO Token</h4>
             <div class="about appear">
                 <div class="about-img">
@@ -102,8 +119,8 @@
                 </div>
             </div>
         </div>
-        <div class="question-block block">
-            <h4 class="title appear">Question</h4>
+        <div class="question-block block" id="a-problem">
+            <h4 class="title appear">Problem</h4>
             <div class="question appear">
                 <div class="option-title">
                     <div class="option-dot">
@@ -131,7 +148,7 @@
                 </div>
             </div>
         </div>
-        <div class="compare-block block">
+        <div class="compare-block block" id="a-comparison">
             <img src="img/TIHO_Web_Ingredient-51.png" alt="">
             <h4 class="title appear">Comparison</h4>
             <p class="content-p non-phone-appear appear">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, quis.</p>
@@ -188,12 +205,23 @@
             </div>
             <div><p class="phone-appear appear">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, quis.</p></div>
         </div>
-        <div class="rules-block block">
+        <div class="rules-block block" id="a-rules">
             <img src="img/TIHO_Web_Ingredient-09.png" class="non-phone-appear" alt="">
             <img src="img/TIHO_Web_Ingredient-54.png" alt="">
             <img src="img/TIHO_Web_Ingredient-09-01.png" class="phone-appear" alt="">
-            <div class="appear">
-                <h4 class="title">Rules of Sale</h4>
+            <div class="rules appear">
+                <h4 class="title">Rules of Selling Token</h4>
+                <div class="option-title">
+                    <div class="option-dot">
+                        <div class="opt-dot" id="rules-1"> </div>
+                        <div class="opt-dot" id="rules-2"> </div>
+                    </div>
+                    <div class="option-text">
+                        <div class="option-1">Rules</div>
+                        <div class="devided-line"></div>
+                        <div class="option-2 op4">Use</div>
+                    </div>
+                </div>
                 <div class="d-row d-sm-col-reverse">
                     <div class="pie-chart f-50 f-sm-100">
                         <img src="img/TIHO_Web_Ingredient-30.png" alt="">
@@ -201,42 +229,49 @@
                         <img src="img/TIHO_Web_Ingredient-32.png" alt="">
                     </div>
                     <div class="rules f-50 f-sm-100">
-                        <div class="option-title">
-                            <!-- <div class="option-dot">
-                                <div class="opt-dot" id="rules-1"> </div>
-                                <div class="opt-dot" id="rules-2"> </div>
-                            </div> -->
-                            <div class="option-text">
-                                <div class="option-1">Rules</div>
-                                <div class="devided-line"></div>
-                                <div class="option-2">Use</div>
-                            </div>
-                        </div>
                         <div class="rules-content">
-                            <div class="option-1 content-p">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas non veniam recusandae. Similique tenetur debitis facilis dolorem, ratione facere qui dolor. Totam ratione perspiciatis id repellendus, dolorem ad atque animi fugit, quasi porro, et molestias aliquid. Odio quo corporis neque.
+                            <div class="option-1 content-p show-content">
+                                <div>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas non veniam recusandae. Similique tenetur debitis facilis dolorem, ratione facere qui dolor. Totam ratione perspiciatis id repellendus, dolorem ad atque animi fugit, quasi porro, et molestias aliquid. Odio quo corporis neque.
+                                </div>
+                                <div class="d-row">
+                                    <ul class="f-50">
+                                        <li>50% Lorem, ipsum.</li>
+                                        <li>15% Lorem, ipsum.</li>
+                                        <li>10% Lorem, ipsum.</li>
+                                        <li>10% Lorem, ipsum.</li>
+                                    </ul>
+                                    <ul class="f-50">
+                                        <li>6% Lorem, ipsum.</li>
+                                        <li>5% Lorem, ipsum.</li>
+                                        <li>4% Lorem, ipsum.</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="option-2 content-p d-row">
-                                <ul class="f-50">
-                                    <li>50% Lorem, ipsum.</li>
-                                    <li>15% Lorem, ipsum.</li>
-                                    <li>10% Lorem, ipsum.</li>
-                                    <li>10% Lorem, ipsum.</li>
-                                </ul>
-                                <ul class="f-50">
-                                    <li>6% Lorem, ipsum.</li>
-                                    <li>5% Lorem, ipsum.</li>
-                                    <li>4% Lorem, ipsum.</li>
-                                </ul>
+                            <div class="option-2 content-p show-content">
+                                <div>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas non veniam recusandae. Similique tenetur debitis facilis dolorem, ratione facere qui dolor. Totam ratione perspiciatis id repellendus, dolorem ad atque animi fugit, quasi porro, et molestias aliquid. Odio quo corporis neque.
+                                </div>
+                                <div class="d-row">
+                                    <ul class="f-50">
+                                        <li>50% Lorem, ipsum.</li>
+                                        <li>15% Lorem, ipsum.</li>
+                                        <li>10% Lorem, ipsum.</li>
+                                        <li>10% Lorem, ipsum.</li>
+                                    </ul>
+                                    <ul class="f-50">
+                                        <li>6% Lorem, ipsum.</li>
+                                        <li>5% Lorem, ipsum.</li>
+                                        <li>4% Lorem, ipsum.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- !!! non-phone -->
-        <!-- <div class="non-phone-appear">
-        <div class="map-block block">
+        <div class="map-block block" id="a-map">
             <div class="appear">
                 <h4 class="title">Roadmap</h4>
                 <div class="map-bgi">
@@ -245,7 +280,7 @@
                 </div>
             </div>
         </div>
-        <div class="team-block block appear">
+        <div class="team-block block appear" id="a-team">
             <h4 class="title ">Team</h4>
             <div class="team ">
                 <div class="option-title">
@@ -483,8 +518,6 @@
                 </div>
             </footer>
         </div>
-        </div> -->
-        <!-- !!! non-phone -->
     </div>
     
     <!-- import scrollReveal -->
