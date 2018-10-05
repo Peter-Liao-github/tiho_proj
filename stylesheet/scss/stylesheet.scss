@@ -110,7 +110,7 @@ html,body{
     position: fixed;
     max-width: 1680px;
     z-index: 99;
-    img{
+    >img{
         &:first-child{
             margin: 10%;
             width: nth($logoWidth , 1);
@@ -122,10 +122,7 @@ html,body{
             margin: 2%;
             top: 20%;
         }
-        &.close-btn{
-            width: nth($logoWidth , 1)/6- 10px;
-            z-index: 1;
-        }
+        
     }   
 }
 #menu{
@@ -153,6 +150,12 @@ html,body{
         opacity: 0.4;
         padding: 0 .5vw;
     }
+}
+.join{
+    position: absolute;
+    top: 93vh;
+    left: 50vw;
+    transform: translateX(-50%);
 }
 .block-fixed-right{
     position: absolute;
@@ -389,7 +392,6 @@ iframe{
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
-    height: 900px;
     h4{
         padding-top: 3rem;
         margin-bottom: 3rem;
@@ -436,7 +438,7 @@ iframe{
         list-style: inside decimal;
     }
     li{
-        margin-bottom: 1.6rem;
+        margin-bottom: 1rem;
     }
     .option-2{
         display: none;
@@ -535,6 +537,9 @@ tbody{
     .devided-line{
         border-color: #fff;
     }
+    img.option-2{
+        display: none;
+    }
 }
 .d-row{
     display: flex;
@@ -550,23 +555,23 @@ tbody{
     flex: 60;
 }
 .pie-chart{
-    text-align: right;
+    text-align: left;
     position: relative;
     img{
         width: 85%;
-        padding-right: 2rem;
+        padding-left: 6rem;
         padding-top: 20px;
         &:nth-child(2){
-            position: absolute;
-            width: 15%;
-            right: 2%;
-            top: 5%;
+            // position: absolute;
+            // width: 15%;
+            // right: 2%;
+            // top: 5%;
         }
         &:nth-child(3){
-            position: absolute;
-            width: 30%;
-            left: 25%;
-            top: 55%;
+            // position: absolute;
+            // width: 30%;
+            // left: 25%;
+            // top: 55%;
         }
     }
 }
@@ -582,10 +587,24 @@ tbody{
     }
     .option-1>div:first-child,.option-2>div:first-child{
         border-bottom: 1px solid #fff;
+        padding-bottom: 20px;
     }
     .option-2{
         display: none;
     }
+    .content-p{
+        div:nth-child(2){
+            padding-top: 20px;
+        }
+    }
+}
+.overflow-rules{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    bottom: -30px;
+    height: 50vh;
+    left: 0;
 }
 
 .map-block{
@@ -780,7 +799,6 @@ footer{
             left: 86vw;
             width: 30px;
             margin-top: 20px;
-
         }
     }
     .menu{
@@ -791,6 +809,12 @@ footer{
     }
     .lang{
         margin-top: 3vh;
+    }
+    .join{
+        top: 95vh;
+        img{
+            width: 55vw;
+        }
     }
 
     .block-top{
@@ -846,7 +870,7 @@ footer{
         font-weight: 400;
         letter-spacing: 3px;
         padding-top: 32px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     iframe{
         height: 175px;
@@ -891,11 +915,13 @@ footer{
         letter-spacing: 1px;
         text-align: left;
         line-height: 1.1rem;
+        padding-top: 1vh;
     }
     .option-text{
         >div{
-            font-size: 20px;
-            padding: 0 12px 0 20px;
+            font-size: 16px;
+            letter-spacing: 0px;
+            padding: 0 12px;
         }
         .devided-line{
             height: 14px;
@@ -917,6 +943,9 @@ footer{
         }
         ol{
             list-style-position: outside;
+        }
+        li{
+            margin-bottom: 1vh;
         }
     }
 
@@ -983,10 +1012,18 @@ footer{
             flex: 100;
         }
         .option-text{
-            margin-top: 0;
+            margin-top: 2vh;
+            width: 100%;
+        }
+        .option-title + div{
+            height: 75vh;
+            overflow-y: scroll;
         }
         li{
             margin-bottom: 12px;
+            &.phone-appear{
+                display: block;
+            }
         }
     }
     .rules-content{
@@ -998,7 +1035,8 @@ footer{
     }
     .pie-chart img{
         width: 75%;
-        padding-right: 3rem;
+        padding-left: 3rem;
+        padding-top: 0;
         &:nth-child(3){
             left: 10%;
         }
@@ -1027,9 +1065,15 @@ footer{
     }
 
     .bottom-block{
-        >div>img{
-            margin-top: 17vh;
+        >div{
+            >img{
+                margin-top: 17vh;
+            }
+            h4{
+
+            }
         }
+
     }
     .d-sm-col{
         flex-direction: column;
