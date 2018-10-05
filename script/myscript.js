@@ -54,7 +54,6 @@ $(window).scroll(function(){
     // }
     // if(scrolled >2.2){
     //     var blurPx = scrolled - 2.2
-    //     // $('.video-block').css({filter: 'brightness('+blurPx*1000+'%)',backgroundPositionY: -blurPx*20+'vh'})
     //     $('.video-block').css({backgroundPositionY: -blurPx*50+'vh'})
 
     // }
@@ -92,8 +91,8 @@ $(function(){
     //關於區圖文切換
     var aboutImgOrigin = ['img/TIHO_Web_Ingredient-22.png','img/TIHO_Web_Ingredient-23.png','img/TIHO_Web_Ingredient-24.png','img/TIHO_Web_Ingredient-25.png']
     var aboutImg = ['img/TIHO_Web_Ingredient-26.png','img/TIHO_Web_Ingredient-27.png','img/TIHO_Web_Ingredient-28.png','img/TIHO_Web_Ingredient-29.png']
-    var aboutTextTitle = ['h3-title-1','h3-title-2','h3-title-3','h3-title-4']
-    var aboutTextP = ['Lorem-1, ipsum dolor sit amet consectetur adipisicing elit. Velit officiis, nostrum, perferendis corporis totam quae minima doloribus dolores est libero officia labore aliquam, voluptatibus dignissimos eligendi id deleniti ea repellat?','Lorem-2, ipsum dolor sit amet consectetur adipisicing elit. Velit officiis, nostrum, perferendis corporis totam quae minima doloribus dolores est libero officia labore aliquam, voluptatibus dignissimos eligendi id deleniti ea repellat?','Lorem-3, ipsum dolor sit amet consectetur adipisicing elit. Velit officiis, nostrum, perferendis corporis totam quae minima doloribus dolores est libero officia labore aliquam, voluptatibus dignissimos eligendi id deleniti ea repellat?','Lorem-4, ipsum dolor sit amet consectetur adipisicing elit. Velit officiis, nostrum, perferendis corporis totam quae minima doloribus dolores est libero officia labore aliquam, voluptatibus dignissimos eligendi id deleniti ea repellat?']
+    var aboutTextTitle = ['Price advantage','Quality advantage','International service','Material- lifelong warranty']
+    var aboutTextP = ['The introduction of cryptocurrency allows everyone to be both consumer and investor to enjoy low-cost price for dental implant .','The quality control by one-stop service from the interference ofupstream Japanese brands to medical technology at the clinic anddental medical service as well as to the manufacturing industry of denturefactory . It is excellent in the industry .','Dental implant in one clinic allows you to enjoy international service with no concern of being left in the dark .','Material- lifelong warranty surgery fee and denture restoration feewill be charged separately.']
     
     for (let i = 1; i < aboutImg.length+1; i++) {
         $('img.about-'+i).click(function () {
@@ -137,12 +136,15 @@ $(function(){
                 backgroundColor: '#bbb',
             })
             $('.'+t+'-content .option-'+j+'.show-content').css('display','none')
+            $('.'+t+' img.option-'+j+'.show-content').css('display','none')
             $('.'+t+' .opt-dot:nth-child('+i+')').css({
                 borderColor: '#bbb',
                 backgroundColor: '#555',
             })
             $('.'+t+'-content .option-'+i+'.show-content').css('display','block')
+            $('.'+t+' img.option-'+i+'.show-content').css('display','block')
             hoverShow($('.'+t+'-content .option-'+i+'.show-content'))
+            hoverShow($('.'+t+' img.option-'+i+'.show-content'))
         }
     }
     //比較區切換
