@@ -805,6 +805,9 @@ footer{
             width: 80vw;
             left: 20vw;
         }
+        li{
+            padding-top: 5vh;
+        }
     }
     .lang{
         margin-top: 3vh;
@@ -1081,6 +1084,12 @@ footer{
             width: 25%;
             padding: 6px;
         }
+    }
+    .team-block{
+        .team-content .content-p{
+            height: 70vh;
+        }
+        
     }
 
     .bottom-block{
