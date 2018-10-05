@@ -636,6 +636,10 @@ tbody{
         padding: 12px;
         img{
             width: 100%;
+            filter: sepia(40%);
+            &:hover{
+                // filter: sepia(0%);
+            }
         }
     }
     .empty-height{

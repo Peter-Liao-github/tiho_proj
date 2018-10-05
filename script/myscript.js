@@ -154,6 +154,15 @@ $(function(){
     //團隊區切換
     blockInnerSwitch('team',1,2)
     blockInnerSwitch('team',2,1)
+    
+    $('.thum img').mouseover(function () {
+        $(this).css('filter','sepia(0%)')
+        $(this).next('.op0').css('opacity','1')
+    })
+    $('.thum img').mouseout(function () {
+        $(this).css('filter','sepia(40%)')
+        $(this).next('.op0').css('opacity','0')
+    })
 })
 
 // window.sr = ScrollReveal({ 
