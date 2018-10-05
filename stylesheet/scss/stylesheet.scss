@@ -474,6 +474,10 @@ iframe{
     width: fit-content;
     margin: 6rem auto 0rem;
     text-align: left;
+    table{
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 thead{
     th{
@@ -482,7 +486,7 @@ thead{
 }
 th{
     font-size: 1.4rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     font-weight: 500;
 }
 tbody{
@@ -493,12 +497,11 @@ tbody{
         }
     }
     th{
-        padding-left: 60px;
-        padding-right: 72px;
+        padding-right: 48px;
     }
     td{
         font-size: 1.2rem;
-        padding: 24px 120px 24px 0px;
+        padding: 24px 0px 24px 12px;
     }
 }
 
@@ -537,15 +540,22 @@ tbody{
     display: flex;
     flex-direction: row;
 }
+.f-40{
+    flex: 40;
+}
 .f-50{
     flex: 50;
+}
+.f-60{
+    flex: 60;
 }
 .pie-chart{
     text-align: right;
     position: relative;
     img{
-        width: 65%;
+        width: 85%;
         padding-right: 2rem;
+        padding-top: 20px;
         &:nth-child(2){
             position: absolute;
             width: 15%;
@@ -570,7 +580,7 @@ tbody{
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .option-1>div:first-child{
+    .option-1>div:first-child,.option-2>div:first-child{
         border-bottom: 1px solid #fff;
     }
     .option-2{
@@ -871,7 +881,7 @@ footer{
     .about-text{
         padding: 12px;
         h3{
-            font-size: 26px;
+            font-size: 18px;
             font-weight: 400;
         }
     }
@@ -920,9 +930,6 @@ footer{
         }
         .option-text{
             letter-spacing: 1px;
-            >div:first-child{
-                margin-left: 15.5vw;
-            }
         }
         >div:last-child{
             width: 75%;
@@ -933,14 +940,13 @@ footer{
     .compare-table{
         position: relative;
         z-index: 1;
-        width: 80%;
+        width: 100%;
         margin: 32px auto;
         text-align: left;
         .option-2{
             display: none;
         }
         th{
-            padding-left: 20px;
             padding-right: 24px;
             font-size: 16px;
             letter-spacing: 1px;
@@ -955,8 +961,8 @@ footer{
     }
 
     .rules-block{
-        padding-top: 3rem;
-        padding-bottom: 4rem;
+        padding-top: 0;
+        padding-bottom: 0;
         >img{
             &:nth-child(2){
                 top: -140px;
@@ -1020,6 +1026,11 @@ footer{
         }
     }
 
+    .bottom-block{
+        >div>img{
+            margin-top: 17vh;
+        }
+    }
     .d-sm-col{
         flex-direction: column;
     }
