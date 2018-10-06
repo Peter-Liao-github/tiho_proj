@@ -5,6 +5,15 @@ $logoWidth: 180px;
 $burgerLeft: 92vw 1600px;
 $burgerMenuLeft: 75vw 1260px;
 
+%bgi{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -156,6 +165,7 @@ html,body{
     top: 93vh;
     left: 50vw;
     transform: translateX(-50%);
+    opacity: 0;
 }
 .block-fixed-right{
     position: absolute;
@@ -289,11 +299,12 @@ html,body{
     // max-height: 1050px;
 }
 .video-block{
-    background-image: url(../../img/TIHO_Web_Ingredient-49.png);
-    background-color: #404D62;
-    background-repeat: no-repeat;
+    background-color: #636C80;
     position: relative;
-    background-size: cover;
+    &-bgi {
+        @extend %bgi;
+        background-image: url(../../img/TIHO_Web_Ingredient-49.png);
+    }
     h4.title{
         margin-bottom: 15vh;
     }
@@ -344,9 +355,11 @@ iframe{
 
 .about-block{
     position: relative;
-    background-image: url(../../img/TIHO_Web_Ingredient-04.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg, #636C80 70%, #DFEAEB 90%);
+    &-bgi{
+        @extend %bgi;
+        background-image: url(../../img/TIHO_Web_Ingredient-04.png);
+    }
     &>img:first-child{
         position: absolute;
         left: 0;

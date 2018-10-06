@@ -7,56 +7,74 @@ $(window).scroll(function(){
     var windowW = $(window).width();
     console.log(scrolled);
 
-    // if (scrolled >0.07){
-    //     $('.ingredient img').animate({opacity: 0},700)
-    // }
-    // if (scrolled >=0.7){
-    //     $('.ingredient img').css('display','none')
-    // }
+    if (scrolled >0.07){
+        $('.ingredient img').animate({opacity: 0},700)
+    }
+    if (scrolled >=0.7){
+        $('.ingredient img').css('display','none')
+    }
 
-    // var matchPoint = 0.8
-    // if (scrolled > 0.5){
-    //     var mTopParameter = (matchPoint - scrolled)/(matchPoint - 0.5)
-    //     var mTop = -42 + 42*mTopParameter
-    //     if (mTopParameter < 0){
-    //         $('#opening-img').css('top', -42+'vh')
-    //     } else{
-    //         $('#opening-img').css('top', mTop+'vh')
-    //     }
-    // }
-    // if(scrolled >matchPoint){
-    //     if(scrolled <= 1){
-    //         $('#opening-word').css({animation: 'fInOut 2.5s 0s 1 both'})
-    //     }
-    // }
-    // //scrolled>1.2
-    // appear('video',1.2);
-    // function appear(block,sc) {
-    //     $('.'+block+' .appear').css({opacity:0})
-    //     var slopeOp;
-    //     var slopeBtm;
-    //     var scInterval = scrolled - sc;
-    //     if(scrolled >sc && scrolled <=sc+0.4){
-    //         slopeOp = 1/0.4;
-    //         slopeBtm = 20/0.4;
-    //         $('.'+block+' .appear').css({opacity: 0+scInterval*slopeOp,bottom: -20+scInterval*slopeBtm+'vh'})
-    //     }
-    //     if(scrolled >sc+0.4 && scrolled <=sc+1){
-    //         slopeOp = 0;
-    //         slopeBtm = 0;
-    //         $('.'+block+' .appear').css({opacity: 1+scInterval*slopeOp,bottom: 0+scInterval*slopeBtm+'vh'})
-    //     }
-    //     if(scrolled >sc+1 && scrolled <=sc+1.2){
-    //         slopeOp = -1/0.2;
-    //         slopeBtm = 20/0.2;
-    //         $('.'+block+' .appear').css({opacity: 1+(scInterval-1)*slopeOp,bottom: 0+(scInterval-1)*slopeBtm+'vh'})
-    //     }
-    // }
-    // if(scrolled >2.2){
-    //     var blurPx = scrolled - 2.2
-    //     $('.video-block').css({backgroundPositionY: -blurPx*50+'vh'})
+    var matchPoint = 0.8
+    if (scrolled > 0.5){
+        var mTopParameter = (matchPoint - scrolled)/(matchPoint - 0.5)
+        var mTop = -42 + 42*mTopParameter
+        if (mTopParameter < 0){
+            $('#opening-img').css('top', -42+'vh')
+        } else{
+            $('#opening-img').css('top', mTop+'vh')
+        }
+    }
+    if(scrolled >matchPoint){ //0.8
+        var cirPercent = scrolled - matchPoint;
+        $('#opening-word').css({clipPath: 'circle('+cirPercent*(50/0.4)+'% at 50% 50%)',opacity: 1})
+        $('.join').css('opacity',(scrolled - matchPoint)*2)
+    }
+    
+    var openingOut = 1.4
+    if(scrolled > openingOut){
+        $('#opening-word').css('opacity',1-(scrolled-openingOut)/0.2)
+    }
+    //video fade in and out
+    appear('video',1.6,0.8);
+    function appear(block,fadeInStartPoint,fadeOutStartPoint) {
+        $('.'+block+' .appear').css({opacity:0})
+        var slopeOp;
+        var slopeBtm;
+        var scInterval = scrolled - fadeInStartPoint;
+        var fadeInEndPoint = 0.4;
+        var fadeOutEndPoint = 1;
+        var fadeOutInterval = fadeOutEndPoint - fadeOutStartPoint;
+        if(scrolled >fadeInStartPoint && scrolled <=fadeInStartPoint+fadeInEndPoint){
+            slopeOp = 1/fadeInEndPoint;
+            slopeBtm = 20/fadeInEndPoint;
+            $('.'+block+' .appear').css({opacity: 0+scInterval*slopeOp,bottom: -20+scInterval*slopeBtm+'vh'})
+        }
+        if(scrolled >fadeInStartPoint+fadeInEndPoint && scrolled <=fadeInStartPoint+fadeOutStartPoint){
+            slopeOp = 0;
+            slopeBtm = 0;
+            $('.'+block+' .appear').css({opacity: 1+scInterval*slopeOp,bottom: 0+scInterval*slopeBtm+'vh'})
+        }
+        if(scrolled >fadeInStartPoint+fadeOutStartPoint && scrolled <=fadeInStartPoint+fadeOutEndPoint){
+            slopeOp = -1/fadeOutInterval;
+            slopeBtm = 20/fadeOutInterval;
+            $('.'+block+' .appear').css({opacity: 1+(scInterval-fadeOutStartPoint)*slopeOp,bottom: 0+(scInterval-fadeOutStartPoint)*slopeBtm+'vh'})
+        }
+    }
+    backgroundSwitch('video','about',2.4)
+    function backgroundSwitch(block,nextBlock,fadeOutBgiPoint) {
+        if(scrolled >fadeOutBgiPoint && scrolled <fadeOutBgiPoint+0.6){
+            var blurPx = scrolled - fadeOutBgiPoint
+            $('.'+block+'-block-bgi').css({backgroundPositionY: -blurPx*80+'vh',opacity: 1.1-blurPx*2.2})
+            $('.'+nextBlock+'-block-bgi').css({opacity: blurPx*1.4})
+        }
+        // if(scrolled <fadeOutBgiPoint){
+        //     $('.'+block+'-block-bgi').css({opacity: 1})
+        //     $('.'+nextBlock+'-block-bgi').css({opacity: 0})
+        // }
+    }
 
-    // }
+    appear('about-block',2.6,0.7);
+    backgroundSwitch('about','question',3.6)
 })
 
 $(document).mouseup(function(e){
