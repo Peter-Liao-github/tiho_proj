@@ -24,10 +24,13 @@ $(window).scroll(function(){
             $('#opening-img').css('top', mTop+'vh')
         }
     }
-    if(scrolled >matchPoint){ //0.8
+    if(scrolled >=matchPoint){ //0.8
         var cirPercent = scrolled - matchPoint;
         $('#opening-word').css({clipPath: 'circle('+cirPercent*(50/0.4)+'% at 50% 50%)',opacity: 1})
         $('.join').css('opacity',(scrolled - matchPoint)*2)
+    }
+    if(scrolled <matchPoint){
+        $('#opening-word').css('opacity',0)
     }
     
     var openingOut = 1.4
@@ -62,6 +65,7 @@ $(window).scroll(function(){
     }
     backgroundSwitch('video','about',2.4)
     function backgroundSwitch(block,nextBlock,fadeOutBgiPoint) {
+        
         if(scrolled >fadeOutBgiPoint && scrolled <fadeOutBgiPoint+0.6){
             var blurPx = scrolled - fadeOutBgiPoint
             $('.'+block+'-block-bgi').css({backgroundPositionY: -blurPx*80+'vh',opacity: 1.1-blurPx*2.2})
@@ -74,7 +78,16 @@ $(window).scroll(function(){
     }
 
     appear('about-block',2.6,0.7);
-    backgroundSwitch('about','question',3.6)
+    backgroundSwitch('about','question',3.3)
+
+    appear('question-block',3.6,0.85);
+    backgroundSwitch('question','compare',4.5)
+
+    appear('compare-block',4.7,0.9);
+    backgroundSwitch('compare','rules',5.4)
+
+    appear('rules-block',5.8,0.9);
+    backgroundSwitch('rules','map',6.7)
 })
 
 $(document).mouseup(function(e){
@@ -110,7 +123,7 @@ $(function(){
     var aboutImgOrigin = ['img/TIHO_Web_Ingredient-22.png','img/TIHO_Web_Ingredient-23.png','img/TIHO_Web_Ingredient-24.png','img/TIHO_Web_Ingredient-25.png']
     var aboutImg = ['img/TIHO_Web_Ingredient-26.png','img/TIHO_Web_Ingredient-27.png','img/TIHO_Web_Ingredient-28.png','img/TIHO_Web_Ingredient-29.png']
     var aboutTextTitle = ['Price advantage','Quality advantage','International service','Material- lifelong warranty']
-    var aboutTextP = ['The introduction of cryptocurrency allows everyone to be both consumer and investor to enjoy low-cost price for dental implant .','The quality control by one-stop service from the interference ofupstream Japanese brands to medical technology at the clinic anddental medical service as well as to the manufacturing industry of denturefactory . It is excellent in the industry .','Dental implant in one clinic allows you to enjoy international service with no concern of being left in the dark .','Material- lifelong warranty surgery fee and denture restoration feewill be charged separately.']
+    var aboutTextP = ['The introduction of cryptocurrency allows everyone to be both consumer and investor to enjoy low-cost price for dental implant.','The quality control by one-stop service from the interference ofupstream Japanese brands to medical technology at the clinic anddental medical service as well as to the manufacturing industry of denturefactory . It is excellent in the industry.','Dental implant in one clinic allows you to enjoy international service with no concern of being left in the dark.','Material- lifelong warranty surgery fee and denture restoration feewill be charged separately.']
     
     for (let i = 1; i < aboutImg.length+1; i++) {
         $('img.about-'+i).click(function () {

@@ -4,6 +4,9 @@ $mainColorRed: #FFC5C5;
 $logoWidth: 180px;
 $burgerLeft: 92vw 1600px;
 $burgerMenuLeft: 75vw 1260px;
+$bgDeep: #636C80;
+$bgLight: #D4E4E7;
+$bgSkin: #FDF4E7;
 
 %bgi{
     content: "";
@@ -110,7 +113,7 @@ html,body{
 }
 
 .container{
-    background-color: #FDF4E7;
+    background-color: $bgSkin;
     max-width: 1680px;
     margin: 0 auto;
 }
@@ -299,7 +302,7 @@ html,body{
     // max-height: 1050px;
 }
 .video-block{
-    background-color: #636C80;
+    background: linear-gradient(180deg, $bgSkin 40%, $bgDeep 60%);
     position: relative;
     &-bgi {
         @extend %bgi;
@@ -355,9 +358,10 @@ iframe{
 
 .about-block{
     position: relative;
-    background: linear-gradient(180deg, #636C80 70%, #DFEAEB 90%);
+    background: linear-gradient(180deg, $bgDeep 70%, $bgLight 90%);
     &-bgi{
         @extend %bgi;
+        opacity: 0;
         background-image: url(../../img/TIHO_Web_Ingredient-04.png);
     }
     &>img:first-child{
@@ -401,10 +405,13 @@ iframe{
 }
 
 .question-block{
-    background-image: url(../../img/TIHO_Web_Ingredient-50.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
+    position: relative;
+    background: linear-gradient(180deg, $bgLight 30%, $bgSkin 40%); 
+    &-bgi{
+        opacity: 0;
+        background-image: url(../../img/TIHO_Web_Ingredient-50.png);
+        @extend %bgi;
+    }
     h4{
         padding-top: 3rem;
         margin-bottom: 3rem;
@@ -451,13 +458,13 @@ iframe{
         list-style: inside decimal;
     }
     li{
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
     }
     .option-2{
         display: none;
     }
     .content-p{
-        line-height: 2rem;
+        line-height: 1.5rem;
         letter-spacing: 1px;
         text-align: left;
     }
@@ -465,8 +472,12 @@ iframe{
 
 .compare-block{
     // background-image: url(../../img/TIHO_Web_Ingredient-51.png);
-    background-color: #FDF4E7;
+    background: linear-gradient(180deg, $bgSkin 60%, $bgDeep 80%); 
     position: relative;
+    &-bgi{
+        @extend %bgi;
+        background-color: $bgSkin;
+    }
     img{
         width: 100%;
         max-width: 1680px;
@@ -521,28 +532,31 @@ tbody{
 }
 
 .rules-block{
-    background-image: url(../../img/TIHO_Web_Ingredient-10.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     color: #fff;
     position: relative;
-    padding-top: 2rem;
+    background: linear-gradient(180deg, $bgDeep 60%, $bgLight 80%); 
+    &-bgi{
+        padding-top: 2rem;
+        @extend %bgi;
+        background-image: url(../../img/TIHO_Web_Ingredient-10.png);
+        opacity: 0;
+        >img{
+            position: absolute;
+            transform: translateX(-50%);
+            &:first-child{
+                width: 85%;
+                left: 50%;
+                opacity: .2;
+                top: -20%;
+            }
+            &:nth-child(2){
+                width: 0%;
+                top: -100%;
+            }
+        }
+    }
     h4{
         margin-top: 5vh;
-    }
-    >img{
-        position: absolute;
-        transform: translateX(-50%);
-        &:first-child{
-            width: 85%;
-            left: 50%;
-            opacity: .2;
-            top: -20%;
-        }
-        &:nth-child(2){
-            width: 0%;
-            top: -100%;
-        }
     }
     .option-text{
         width: 98%;
@@ -956,7 +970,7 @@ footer{
         }
     }
 
-    .question-block{
+    .question-block-bgi{
         background-image: url(../../img/TIHO_Web_Ingredient-54-1.png);
     }
     .question-content{
@@ -995,7 +1009,7 @@ footer{
                 font-size: 13px;
             }
         }
-        >div:last-child{
+        &-bgi>div:last-child{
             width: 75%;
             margin: auto;
             text-align: left;
