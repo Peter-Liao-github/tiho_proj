@@ -18,10 +18,13 @@ $(window).scroll(function(){
     if (scrolled > 0.5){
         var mTopParameter = (matchPoint - scrolled)/(matchPoint - 0.5)
         var mTop = -42 + 42*mTopParameter
+        var mTopPhone = -35 + 35*mTopParameter
         if (mTopParameter < 0){
             $('#opening-img').css('top', -42+'vh')
+            $('#opening-img-phone').css('top', -35+'vh')
         } else{
             $('#opening-img').css('top', mTop+'vh')
+            $('#opening-img-phone').css('top', -35+'vh')
         }
     }
     if(scrolled >=matchPoint){ //0.8
@@ -84,7 +87,9 @@ $(window).scroll(function(){
 
     if(scrolled > 5.4){
         $('.rules-block-bgi>img:first-child').css('top', -10-(scrolled-5.4)*50+'vh')
+        $('.rules-block-bgi>img:nth-child(3)').css('top', -10-(scrolled-5.4)*50+'vh')
     }
+    
     appear('rules-block',5.8,0.9);
     backgroundSwitch('rules','map',6.6)
 
@@ -191,6 +196,14 @@ $(function(){
     //規則區切換
     blockInnerSwitch('rules',1,2)
     blockInnerSwitch('rules',2,1)
+    $('.pub-sale').click(function () {
+        $('.pub-sale-card').css('display','block')
+        $('.pub-sale-card').animate({opacity:1},700)
+    })
+    $('.pub-close').click(function () {
+        $('.pub-sale-card').css('display','none')
+    })
+
     //團隊區切換
     blockInnerSwitch('team',1,2)
     blockInnerSwitch('team',2,1)
