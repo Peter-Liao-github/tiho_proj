@@ -1157,10 +1157,19 @@ footer{
             letter-spacing: 1px;
         }
     }
-    .pub-sale-card-inner{
-        width: 90vw;
-        h5{
-            margin-bottom: 12px;
+    .pub-sale{
+        padding: 1px 2px;
+        font-size: 12px;
+        letter-spacing: 0px;
+        img{
+            width: 14px;
+            margin-right: 4px;
+        }
+        &-card-inner{
+            width: 90vw;
+            h5{
+                margin-bottom: 12px;
+            }
         }
     }
     .pie-chart img{
