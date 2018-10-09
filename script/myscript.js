@@ -19,7 +19,7 @@ $(window).scroll(function(){
         var mTopParameter = (matchPoint - scrolled)/(matchPoint - 0.5)
         // var mTop = -42 + 42*mTopParameter
         var mTop = 42
-        var mTopPhone = 32;
+        var mTopPhone = 34;
         var mTopWide = 29;
         var calTop = -mTop + mTop *mTopParameter
         var calTopPhone = -mTopPhone + mTopPhone *mTopParameter
