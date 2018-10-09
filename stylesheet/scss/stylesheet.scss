@@ -1062,9 +1062,13 @@ footer{
         }
         .option-text{
             letter-spacing: 1px;
-            text-align-last: left;
+            text-align: left;
             >div{
                 font-size: 13px;
+                &:first-child{
+                    padding-right: 0;
+                    padding-left: 2px;
+                }
             }
         }
         &-bgi>div:last-child{
@@ -1099,6 +1103,9 @@ footer{
     .rules-block{
         padding-top: 0;
         padding-bottom: 0;
+        &-bgi{
+            background-image: url(../../img/TIHO_Web_Phone-13.png);
+        }
         >img{
             &:nth-child(2){
                 top: -140px;
@@ -1121,6 +1128,16 @@ footer{
         .option-text{
             margin-top: 2vh;
             width: 100%;
+            text-align-last: left;
+            >div{
+                &:first-child{
+                    padding-left: 20px;
+                    padding-right: 2px;
+                }
+                &:nth-child(3){
+                    padding-left: 2px;
+                }
+            }
         }
         .option-title + div{
             height: 75vh;
