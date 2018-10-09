@@ -1201,9 +1201,14 @@ footer{
         }
     }
     .team-block{
-        .team-content .content-p{
-            height: 70vh;
-        }
+        .team-content{
+            .content-p{
+                height: 70vh;
+            }
+            >img{
+                height: 70px;
+            }
+        } 
         
     }
 
