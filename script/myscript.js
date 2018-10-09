@@ -17,14 +17,25 @@ $(window).scroll(function(){
     var matchPoint = 0.8
     if (scrolled > 0.5){
         var mTopParameter = (matchPoint - scrolled)/(matchPoint - 0.5)
-        var mTop = -42 + 42*mTopParameter
-        var mTopPhone = -35 + 35*mTopParameter
+        // var mTop = -42 + 42*mTopParameter
+        var mTop = 42
+        var mTopPhone = 32;
+        var mTopWide = 36;
+        var calTop = -mTop + mTop *mTopParameter
+        var calTopPhone = -mTopPhone + mTopPhone *mTopParameter
+        var calTopWide = -mTopWide + mTopWide *mTopParameter
         if (mTopParameter < 0){
-            $('#opening-img').css('top', -42+'vh')
-            $('#opening-img-phone').css('top', -35+'vh')
+            $('#opening-img').css('top', -mTop+'vh')
+            $('#opening-img-phone').css('top', -mTopPhone+'vh')
+            if (windowW >= 1680){
+                $('#opening-img').css('top', -mTopWide+'vh')
+            }
         } else{
-            $('#opening-img').css('top', mTop+'vh')
-            $('#opening-img-phone').css('top', mTopPhone+'vh')
+            $('#opening-img').css('top', calTop+'vh')
+            $('#opening-img-phone').css('top', calTopPhone+'vh')
+            if (windowW >= 1680){
+                $('#opening-img').css('top', calTopWide+'vh')
+            }
         }
     }
     if(scrolled >=matchPoint){ //0.8
