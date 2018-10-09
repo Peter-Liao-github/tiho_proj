@@ -20,7 +20,7 @@ $(window).scroll(function(){
         // var mTop = -42 + 42*mTopParameter
         var mTop = 42
         var mTopPhone = 32;
-        var mTopWide = 36;
+        var mTopWide = 29;
         var calTop = -mTop + mTop *mTopParameter
         var calTopPhone = -mTopPhone + mTopPhone *mTopParameter
         var calTopWide = -mTopWide + mTopWide *mTopParameter
