@@ -71,23 +71,30 @@ $(window).scroll(function(){
             $('.'+block+'-block-bgi').css({backgroundPositionY: -blurPx*80+'vh',opacity: 1.1-blurPx*2.2})
             $('.'+nextBlock+'-block-bgi').css({opacity: blurPx*1.4})
         }
-        // if(scrolled <fadeOutBgiPoint){
-        //     $('.'+block+'-block-bgi').css({opacity: 1})
-        //     $('.'+nextBlock+'-block-bgi').css({opacity: 0})
-        // }
     }
 
     appear('about-block',2.6,0.7);
     backgroundSwitch('about','question',3.3)
 
     appear('question-block',3.6,0.85);
-    backgroundSwitch('question','compare',4.5)
+    backgroundSwitch('question','compare',4.4)
 
     appear('compare-block',4.7,0.9);
     backgroundSwitch('compare','rules',5.4)
 
+    if(scrolled > 5.4){
+        $('.rules-block-bgi>img:first-child').css('top', -10-(scrolled-5.4)*50+'vh')
+    }
     appear('rules-block',5.8,0.9);
-    backgroundSwitch('rules','map',6.7)
+    backgroundSwitch('rules','map',6.6)
+
+    appear('map-block',6.55,0.9);
+    backgroundSwitch('map','team',7.7)
+
+    appear('team-block',7.9,0.9);
+    backgroundSwitch('team','bottom',8.8)
+
+    appear('bottom-block',8.9,1.1);
 })
 
 $(document).mouseup(function(e){

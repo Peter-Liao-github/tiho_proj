@@ -448,6 +448,11 @@ iframe{
         height: 20px;
     }
 }
+.question .option-text{
+    .option-1{
+        margin-left: 1rem;
+    }
+}
 .question-content{
     text-align: center;
     >div{
@@ -534,7 +539,7 @@ tbody{
 .rules-block{
     color: #fff;
     position: relative;
-    background: linear-gradient(180deg, $bgDeep 60%, $bgLight 80%); 
+    background: linear-gradient(180deg, $bgDeep 85%, $bgLight 99%); 
     &-bgi{
         padding-top: 2rem;
         @extend %bgi;
@@ -588,18 +593,11 @@ tbody{
         width: 85%;
         padding-left: 6rem;
         padding-top: 20px;
-        &:nth-child(2){
-            // position: absolute;
-            // width: 15%;
-            // right: 2%;
-            // top: 5%;
-        }
-        &:nth-child(3){
-            // position: absolute;
-            // width: 30%;
-            // left: 25%;
-            // top: 55%;
-        }
+    }
+}
+.rules .option-text{
+    .option-1{
+        margin-left: 3rem;
     }
 }
 .rules-content{
@@ -634,9 +632,11 @@ tbody{
 }
 
 .map-block{
-    background-image: url(../../img/TIHO_Web_Ingredient-06.png);
-    background-position-y: -80vh;
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg, $bgLight 50%, $bgSkin 50%);
+    &-bgi{
+        @extend %bgi;
+        // background: linear-gradient(180deg, $bgLight 50%, $bgSkin 50%);
+    }
 }
 .map-bgi{
     width: 85%;
@@ -657,10 +657,14 @@ tbody{
     h4{
         margin-bottom: 2rem;
     }
+    .option-title{
+        z-index: 2;
+        position: relative;
+    }
     .option-text{
         margin-bottom: 0;
         .option-1{
-            padding-left: 0.8rem;
+            padding-left: 0rem;
         }
     }
     .team-content{
@@ -670,7 +674,7 @@ tbody{
             margin: auto;
             height: 480px;
             overflow-y: scroll;
-            padding-top: 0;
+            padding-top: 5vh;
             margin-top: 1.6rem;
             text-align: center;
         }
@@ -679,10 +683,16 @@ tbody{
         }
         >img{
             position: absolute;
-            bottom: -5vh;
             height: 180px;
             width: 100%;
             transform: translateX(-50%);
+            &:nth-of-type(1){
+                top: -5vh;
+                z-index: 1;
+            }
+            &:nth-of-type(2){
+                bottom: -5vh;
+            }
         }
     }
     .thum{
@@ -692,9 +702,6 @@ tbody{
         img{
             width: 100%;
             filter: sepia(40%);
-            &:hover{
-                // filter: sepia(0%);
-            }
         }
     }
     .empty-height{
