@@ -24,7 +24,7 @@ $(window).scroll(function(){
             $('#opening-img-phone').css('top', -35+'vh')
         } else{
             $('#opening-img').css('top', mTop+'vh')
-            $('#opening-img-phone').css('top', -35+'vh')
+            $('#opening-img-phone').css('top', mTopPhone+'vh')
         }
     }
     if(scrolled >=matchPoint){ //0.8
