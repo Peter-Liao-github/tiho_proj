@@ -172,17 +172,29 @@ tbody {
             }
         }
         li{
-            margin-bottom: 6px;
+            margin-bottom: 0px;
         }
     }
     .rules-content{
         .content-p{
             padding-top: 12px;
             line-height: 1.4rem;
+            div:nth-child(2){
+                padding-top: 8px;
+            }
+        }
+        .option-1,.option-2{
+            &>div:first-child{
+                padding-bottom: 8px;
+            }
         }
     }
     .pub-sale{
         top: 12px;
+    }
+    .pie-chart img{
+        width: 65%;
+        margin-top: -32px;
     }
 
     .team{

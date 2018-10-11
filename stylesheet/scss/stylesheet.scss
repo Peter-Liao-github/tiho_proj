@@ -1188,9 +1188,11 @@ footer{
             margin-right: 4px;
         }
         &-card-inner{
-            width: 90vw;
+            width: 85vw;
+            padding: 0 4px;
             h5{
                 margin-bottom: 12px;
+                margin-top: 4vh;
             }
         }
     }
