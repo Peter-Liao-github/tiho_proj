@@ -165,10 +165,22 @@ html,body{
 }
 .join{
     position: absolute;
-    top: 93vh;
+    top: 91vh;
+    opacity: 0;
     left: 50vw;
     transform: translateX(-50%);
-    opacity: 0;
+    img{
+        &:first-child{
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+            top: -15px;
+            animation: float5 4s 0s infinite both;
+        }
+        &:nth-child(2){
+            animation: lighterShowing 4s 0s infinite both;
+        }
+    }
 }
 .block-fixed-right{
     position: absolute;
@@ -738,7 +750,7 @@ tbody{
             width: 100%;
             transform: translateX(-50%);
             &:nth-of-type(1){
-                top: -5vh;
+                top: -10vh;
                 z-index: 1;
             }
             &:nth-of-type(2){
@@ -748,8 +760,9 @@ tbody{
     }
     .thum{
         width: 12%;
-        display: inline-block;
-        padding: 12px;
+        margin: 12px;
+        display: inline-flex;
+        flex-direction: column;
         img{
             width: 100%;
             filter: sepia(40%);
@@ -882,7 +895,7 @@ footer{
     }
 
     .block-fixed{
-        img:nth-child(2),img:nth-child(3){
+        >img:nth-child(2),img:nth-child(3){
             left: 86vw;
             width: 30px;
             margin-top: 20px;
@@ -901,9 +914,14 @@ footer{
         margin-top: 3vh;
     }
     .join{
-        top: 95vh;
+        top: 92vh;
         img{
-            width: 55vw;
+            &:first-child{
+                width: 14px;
+            }
+            &:nth-child(2){
+                width: 255px;
+            }
         }
     }
 
@@ -1131,7 +1149,7 @@ footer{
         .option-text{
             margin-top: 2vh;
             width: 100%;
-            text-align-last: left;
+            text-align: left;
             >div{
                 &:first-child{
                     padding-left: 20px;
@@ -1200,7 +1218,8 @@ footer{
     .team{
         .thum{
             width: 25%;
-            padding: 6px;
+            display: inline-block;
+            margin: 6px;
         }
     }
     .team-block{
@@ -1210,6 +1229,9 @@ footer{
             }
             >img{
                 height: 70px;
+                &:nth-of-type(1){
+                    top: -5vh;
+                }
             }
         } 
         
@@ -1297,5 +1319,23 @@ footer{
     25%,75%{
         opacity: 1;
         transform: translate(9%,0%);
+    }
+}
+@keyframes float5{
+    0%,50%,100%{
+        opacity: 0;
+        transform: translate(-50%,-175%);
+    }
+    25%,75%{
+        opacity: 1;
+        transform: translate(-50%,5%);
+    }
+}
+@keyframes lighterShowing{
+    0%,50%,100%{
+        filter: invert(0%);
+    }
+    25%,75%{
+        filter: invert(25%);
     }
 }
