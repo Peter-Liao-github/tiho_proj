@@ -230,7 +230,7 @@ tbody {
 @media (max-width:900px) and (min-width:600px){
     .question-content{ 
         .content-p{
-            &.option-1{
+            &.option-1,&.option-2{
                 max-width: 63%;
             }
         }
