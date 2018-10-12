@@ -21,20 +21,28 @@ $(window).scroll(function(){
         var mTop = 42
         var mTopPhone = 34;
         var mTopWide = 29;
+        var mTopPad = 36;
         var calTop = -mTop + mTop *mTopParameter
         var calTopPhone = -mTopPhone + mTopPhone *mTopParameter
         var calTopWide = -mTopWide + mTopWide *mTopParameter
+        var calTopPad = -mTopPad + mTopPad *mTopParameter
         if (mTopParameter < 0){
             $('#opening-img').css('top', -mTop+'vh')
             $('#opening-img-phone').css('top', -mTopPhone+'vh')
             if (windowW >= 1680){
                 $('#opening-img').css('top', -mTopWide+'vh')
             }
+            if (windowW <= 900 && windowW > 600){
+                $('#opening-img-phone').css('top', -mTopPad+'vh')
+            }
         } else{
             $('#opening-img').css('top', calTop+'vh')
             $('#opening-img-phone').css('top', calTopPhone+'vh')
             if (windowW >= 1680){
                 $('#opening-img').css('top', calTopWide+'vh')
+            }
+            if (windowW <= 900 && windowW > 600){
+                $('#opening-img-phone').css('top', calTopPad+'vh')
             }
         }
     }

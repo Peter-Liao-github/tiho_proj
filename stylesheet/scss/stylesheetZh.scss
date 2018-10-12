@@ -227,8 +227,14 @@ tbody {
         }
     }
 }
-@media (max-width:640px){
-
+@media (max-width:900px) and (min-width:600px){
+    .question-content{ 
+        .content-p{
+            &.option-1{
+                max-width: 63%;
+            }
+        }
+    }
 }
 @media (max-width:512px){
     
