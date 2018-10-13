@@ -778,6 +778,7 @@ tbody{
 
 .bottom-block{
     position: relative;
+    background: linear-gradient(180deg, $bgSkin 70%, #404D61 90%);
     >div{
         h4{
             letter-spacing: 1px;
