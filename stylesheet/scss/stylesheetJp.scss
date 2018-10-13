@@ -122,6 +122,7 @@ tbody {
         .content-p{
             &.option-1{
                 max-width: 83%;
+                margin-right: auto;
             }
             &.option-2{
                 line-height: 2rem;
@@ -133,9 +134,13 @@ tbody {
         }
     }
 
-    .option-text{
+    .question .option-text{
         margin-top: 2rem;
         margin-bottom: 4rem;
+        .option-1{
+            margin-left: -2rem;
+        }
+
     }
 
     .compare-block{
@@ -145,13 +150,14 @@ tbody {
                 font-size: 16px;
                 &:first-child{
                     padding: 0 12px;
+                    margin-left: 5rem;
                 }
             }
         }
     }
     .compare-block{
         table{
-            width: 95%;
+            width: 77%;
         }
         th,td{
             font-size: 13px;
@@ -164,10 +170,13 @@ tbody {
     .rules-block{
         .option-text{
             text-align: center;
-            margin-bottom: 4vh;
+            margin-bottom: 1.2vh;
             >div{
                 font-size: 16px;
 
+                &:nth-child(1){
+                    margin-left: 3rem;
+                }
                 &:nth-child(3){
                     padding: 0 12px;
                 }
@@ -186,12 +195,12 @@ tbody {
             line-height: 1.1rem;
             font-size: 12px;
             div:nth-child(2){
-                padding-top: 8px;
+                padding-top: 6px;
             }
         }
         .option-1,.option-2{
             &>div:first-child{
-                padding-bottom: 8px;
+                padding-bottom: 6px;
             }
         }
     }
@@ -200,13 +209,13 @@ tbody {
     }
     .pie-chart img{
         width: 65%;
-        margin-top: -32px;
+        margin-top: -38px;
     }
 
     .team{
         .option-text{
             .option-1{
-                margin-left: 0;
+                margin-left: -5rem;
             }
         }
         &-block{

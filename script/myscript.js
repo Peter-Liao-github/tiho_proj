@@ -29,7 +29,7 @@ $(window).scroll(function(){
         if (mTopParameter < 0){
             $('#opening-img').css('top', -mTop+'vh')
             $('#opening-img-phone').css('top', -mTopPhone+'vh')
-            if (windowW >= 1680){
+            if (windowW >= 1800){
                 $('#opening-img').css('top', -mTopWide+'vh')
             }
             if (windowW <= 900 && windowW > 600){
@@ -38,7 +38,7 @@ $(window).scroll(function(){
         } else{
             $('#opening-img').css('top', calTop+'vh')
             $('#opening-img-phone').css('top', calTopPhone+'vh')
-            if (windowW >= 1680){
+            if (windowW >= 1800){
                 $('#opening-img').css('top', calTopWide+'vh')
             }
             if (windowW <= 900 && windowW > 600){
