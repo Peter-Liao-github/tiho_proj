@@ -148,6 +148,7 @@ $(function(){
         e.preventDefault();
         $('.video-file img:nth-of-type(1)').animate({left: '-9%'},1200)
         $('iframe').css('pointer-events','initial')
+        $('video').css('pointer-events','initial')
     });
 
     //關於區圖文切換

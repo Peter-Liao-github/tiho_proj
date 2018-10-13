@@ -347,7 +347,7 @@ h4.title{
 .appear{
     position: relative;
 }
-iframe{
+iframe,video{
     width: 65%;
     height: 500px;
     pointer-events: none;
@@ -830,7 +830,7 @@ footer{
         background-size: 1680px;
     }
 
-    iframe{
+    iframe,video{
         height: 600px;
     }
 
@@ -857,7 +857,7 @@ footer{
     }
 }
 @media (max-width:1280px){
-    iframe{
+    iframe,video{
         height: 480px;
     }
     .rules-block{
@@ -985,7 +985,7 @@ footer{
             margin-bottom: 20px;
         }
     }
-    iframe{
+    iframe,video{
         height: 175px;
         width: 85%;
         position: relative;
@@ -1287,7 +1287,7 @@ footer{
         letter-spacing: 0.6rem;
         font-size: 1.6rem;
     }
-    iframe{
+    iframe,video{
         height: 360px;
     }
     .question-block-bgi{
