@@ -12,6 +12,7 @@
     }
 }
 .question-content .content-p{
+    width: 65%;
     font-weight: 300;
     line-height: 2.2rem;
     &.option-1{
@@ -86,7 +87,7 @@ tbody {
 @media (min-width:1680px){
     .question-content .content-p{
         &.option-1{
-            max-width: 25%;
+            max-width: 45%;
         }
     }
 }
