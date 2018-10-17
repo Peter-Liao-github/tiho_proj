@@ -157,7 +157,7 @@ $(function(){
     var aboutTextTitle = ['Price advantage','Quality advantage','International service','Material- lifelong warranty']
     var aboutTextP = ['The introduction of cryptocurrency allows everyone to be both consumer and investor to enjoy low-cost price for dental implant.','The quality control by one-stop service from the interference ofupstream Japanese brands to medical technology at the clinic anddental medical service as well as to the manufacturing industry of denturefactory . It is excellent in the industry.','Dental implant in one clinic allows you to enjoy international service with no concern of being left in the dark.','Material- lifelong warranty surgery fee and denture restoration feewill be charged separately.']
     
-    for (let i = 1; i < aboutImg.length+1; i++) {
+    for (var i = 1; i < aboutImg.length+1; i++) {
         $('img.about-'+i).click(function () {
             hoverChange(i,4)
         })
