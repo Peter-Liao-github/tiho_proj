@@ -1,4 +1,4 @@
-.about-text span{
+.about-text span {
     font-weight: 400;
     letter-spacing: 4px;
     font-size: 2.5rem;
@@ -6,33 +6,38 @@
 
 .question {
     .option-text {
-        .option-1{
+        .option-1 {
             margin-left: 0;
-        }   
+        }
     }
 }
-.question-content .content-p{
+
+.question-content .content-p {
     font-weight: 300;
     line-height: 3rem;
-    &.option-1{
+
+    &.option-1 {
         max-width: 34%;
     }
 }
 
 
-.compare-table{
+.compare-table {
     width: 75%;
 }
-thead{
-    th{
+
+thead {
+    th {
         padding: 20px 24px 20px 60px;
     }
 }
+
 tbody {
-    th{
+    th {
         padding: 12px 48px;
     }
-    td{
+
+    td {
         padding: 24px;
         font-weight: 300;
     }
@@ -40,41 +45,45 @@ tbody {
 
 .rules {
     .option-text {
-        .option-1{
+        .option-1 {
             margin-left: 1.5rem;
-        }   
+        }
     }
 }
-.rules-content{
-    >div{
+
+.rules-content {
+    >div {
         line-height: 2.4rem;
         letter-spacing: 1.2px;
         padding-top: 36px;
     }
 }
-.pub-sale{
+
+.pub-sale {
     top: 32px;
 }
 
-.team-block{
-    .thum{
+.team-block {
+    .thum {
         margin-bottom: 2px;
-        p{
+
+        p {
             margin-top: 10px;
         }
     }
 }
+
 .team {
     .option-text {
-        .option-1{
+        .option-1 {
             margin-left: 2rem;
-        }   
+        }
     }
 }
 
-.bottom-block{
-    >div{
-        h4{
+.bottom-block {
+    >div {
+        h4 {
             letter-spacing: 24px;
             padding-left: 48px;
             font-weight: 400;
@@ -82,143 +91,163 @@ tbody {
     }
 }
 
-@media (min-width:1680px){
-    .question-content .content-p{
-        &.option-1{
+@media (min-width:1680px) {
+    .question-content .content-p {
+        &.option-1 {
             max-width: 26%;
         }
     }
 }
-@media (max-width:1280px){
-    
-}
-@media (max-width:1024px){
-    
-}
-@media (max-width:768px){
+
+@media (max-width:1280px) {}
+
+@media (max-width:1024px) {}
+
+@media (max-width:768px) {
     .about-text {
-        span{
+        span {
             font-size: 1.4rem;
             letter-spacing: 3px;
         }
-        p{
+
+        p {
             text-align: center;
             line-height: 24px;
             width: 87%;
             margin: auto;
         }
-        h3{
+
+        h3 {
             margin-bottom: 42px;
         }
     }
-    .about{
+
+    .about {
         margin-top: 8vh;
         padding-bottom: 2vh;
     }
 
-    .question-content{
-        .content-p{
-            &.option-1{
+    .question-content {
+        .content-p {
+            &.option-1 {
                 max-width: 83%;
             }
-            &.option-2{
+
+            &.option-2 {
                 line-height: 2rem;
             }
         }
-        li{
+
+        li {
             margin-bottom: 1.6rem;
             font-size: 12px;
         }
     }
 
-    .option-text{
+    .option-text {
         margin-top: 2rem;
         margin-bottom: 4rem;
     }
 
-    .compare-block{
-        .option-text{
+    .compare-block {
+        .option-text {
             text-align: center;
-            >div{
+
+            >div {
                 font-size: 16px;
-                &:first-child{
+
+                &:first-child {
                     padding: 0 12px;
                 }
             }
         }
     }
-    .compare-block{
-        table{
+
+    .compare-block {
+        table {
             width: 95%;
         }
-        th,td{
+
+        th,
+        td {
             font-size: 13px;
         }
     }
-    tbody th{
+
+    tbody th {
         padding: 12px;
     }
-    
-    .rules-block{
-        .option-text{
+
+    .rules-block {
+        .option-text {
             text-align: center;
             margin-bottom: 4vh;
-            >div{
+
+            >div {
                 font-size: 16px;
 
-                &:nth-child(3){
+                &:nth-child(3) {
                     padding: 0 12px;
                 }
             }
         }
-        li{
+
+        li {
             margin-bottom: 0px;
         }
     }
-    .rules-content{
-        >div{
+
+    .rules-content {
+        >div {
             padding-bottom: 16px
         }
-        .content-p{
+
+        .content-p {
             padding-top: 12px;
             line-height: 1.1rem;
             font-size: 12px;
-            div:nth-child(2){
+
+            div:nth-child(2) {
                 padding-top: 8px;
             }
         }
-        .option-1,.option-2{
-            &>div:first-child{
+
+        .option-1,
+        .option-2 {
+            &>div:first-child {
                 padding-bottom: 8px;
             }
         }
     }
-    .pub-sale{
+
+    .pub-sale {
         top: 12px;
     }
-    .pie-chart img{
-        width: 65%;
-        margin-top: -32px;
+
+    .pie-chart img {
+        width: 60%;
+        margin-top: 0px;
     }
 
-    .team{
-        .option-text{
-            .option-1{
+    .team {
+        .option-text {
+            .option-1 {
                 margin-left: 0;
             }
         }
-        &-block{
-            .thum{
-                p{
+
+        &-block {
+            .thum {
+                p {
                     letter-spacing: 0;
                 }
             }
         }
     }
 
-    .bottom-block{
-        >div{
-            h4{
+    .bottom-block {
+        >div {
+            h4 {
                 padding-left: 12px;
                 letter-spacing: 4px;
                 line-height: 48px;
@@ -227,15 +256,17 @@ tbody {
         }
     }
 }
-@media (max-width:900px) and (min-width:600px){
-    .question-content{ 
-        .content-p{
-            &.option-1,&.option-2{
+
+@media (max-width:900px) and (min-width:600px) {
+    .question-content {
+        .content-p {
+
+            &.option-1,
+            &.option-2 {
                 max-width: 63%;
             }
         }
     }
 }
-@media (max-width:512px){
-    
-}
+
+@media (max-width:512px) {}
