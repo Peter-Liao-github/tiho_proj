@@ -7,6 +7,7 @@ $burgerMenuLeft: 75vw 1260px;
 $bgDeep: #636c80;
 $bgLight: #d4e4e7;
 $bgSkin: #fdf4e7;
+
 %bgi {
   content: '';
   position: absolute;
@@ -155,9 +156,10 @@ table {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
 * {
   font-family: '微軟正黑體', sans-serif; //讓 ff fi不連在一起
-  font-feature-settings: 'liga' 0;
+  font-feature-settings: 'liga'0;
 }
 
 body {
@@ -216,11 +218,13 @@ body {
   position: fixed;
   max-width: 1680px;
   z-index: 99;
-  > img {
+
+  >img {
     &:first-child {
       margin: 10%;
       width: nth($logoWidth, 1);
     }
+
     &:nth-child(2),
     &:nth-child(3),
     &.close-btn {
@@ -247,6 +251,7 @@ body {
     height: 100vh;
     text-align: center;
   }
+
   li {
     padding: 5vh 0 2.5vh;
   }
@@ -256,6 +261,7 @@ body {
   border-top: 1px solid #000;
   margin-top: 6vh;
   line-height: 4vh;
+
   a {
     opacity: 0.4;
     padding: 0 0.5vw;
@@ -268,6 +274,7 @@ body {
   opacity: 0;
   left: 50vw;
   transform: translateX(-50%);
+
   img {
     &:first-child {
       left: 50%;
@@ -276,6 +283,7 @@ body {
       top: -15px;
       animation: float5 4s 0s infinite both;
     }
+
     &:nth-child(2) {
       animation: lighterShowing 4s 0s infinite both;
     }
@@ -285,6 +293,7 @@ body {
 .block-fixed-right {
   position: absolute;
   right: 3%;
+
   span {
     opacity: 0;
     color: rgb(140, 140, 140);
@@ -310,21 +319,24 @@ body {
 }
 
 .time-count {
-  ul > li {
+  ul>li {
     display: inline-block;
     margin: 8% 2% 2%;
     font-size: 2.2rem;
     text-align: center;
     color: rgb(140, 140, 140);
+
     &:last-child {
       padding-left: 3%;
       border-left: 1px solid rgb(140, 140, 140);
     }
   }
+
   h4 {
     letter-spacing: 0.2rem;
     font-family: 'Open Sans Condensed', sans-serif;
   }
+
   p {
     font-size: 1.2rem;
     font-weight: 100;
@@ -333,33 +345,41 @@ body {
 
 .large-img {
   position: relative;
+
   .floating-word {
     // background-image: url(../../img/TIHO_Web_Ingredient-11.png);
     background-repeat: no-repeat;
     background-size: 70%;
     background-position-x: center;
     height: 1600px;
+
     img {
       left: 50%;
       width: 100%;
       top: -15%;
+
       &:nth-child(1) {
         animation: float1 9s 0s infinite both;
       }
+
       &:nth-child(2) {
         animation: float2 7s 0s infinite both;
       }
+
       &:nth-child(3) {
         animation: float2 8s 0s infinite both;
       }
+
       &:nth-child(4) {
         animation: float1 6s 0s infinite both;
       }
     }
   }
+
   img {
     position: absolute;
   }
+
   .ingredient img {
     left: 50%;
     width: 100%;
@@ -408,12 +428,14 @@ body {
   position: absolute;
   height: 50vh;
   bottom: 0;
-  & > img {
+
+  &>img {
     width: 100%;
     left: 0;
     top: 200vh;
     position: absolute;
   }
+
   h2 {
     position: fixed;
     top: 50%;
@@ -433,11 +455,13 @@ body {
 .video-block {
   background: linear-gradient(180deg, $bgSkin 40%, $bgDeep 60%);
   position: relative;
+
   &-bgi {
     @extend %bgi;
     background-image: url(../../img/TIHO_Web_Ingredient-69.png);
     background-position-y: 30%;
   }
+
   h4.title {
     margin-bottom: 6vh;
     margin-top: 9vh;
@@ -451,6 +475,7 @@ body {
   width: 80%;
   max-width: 1344px;
   transform: translateX(-47%);
+
   img {
     opacity: 0;
     width: 100%; // animation: fInOut 1.2s 0.2s 1 both;
@@ -478,12 +503,14 @@ video {
 .video-file {
   img {
     position: absolute;
+
     &:nth-of-type(1) {
       bottom: 15%;
       left: 2%;
       width: 25%;
       animation: float4 9s 0s infinite both;
     }
+
     &:nth-of-type(2) {
       top: 12%;
       animation: float3 7s 0s infinite both;
@@ -494,17 +521,20 @@ video {
 .about-block {
   position: relative;
   background: linear-gradient(180deg, $bgDeep 70%, $bgLight 90%);
+
   &-bgi {
     @extend %bgi;
     opacity: 0;
     background-image: url(../../img/TIHO_Web_Ingredient-66.png);
   }
-  & > img:first-child {
+
+  &>img:first-child {
     position: absolute;
     left: 0;
     top: 10%;
     width: 80%;
   }
+
   h4 {
     padding-top: 4rem;
   }
@@ -528,10 +558,12 @@ video {
 
 .about-text {
   padding: 2%;
+
   h3 {
     font-size: 2.7rem;
     margin-bottom: 2rem;
   }
+
   span {
     border-bottom: 3px solid #fff;
     padding-bottom: 1.2rem;
@@ -546,11 +578,13 @@ video {
 .question-block {
   position: relative;
   background: linear-gradient(180deg, $bgLight 30%, $bgSkin 40%);
+
   &-bgi {
     opacity: 0;
     background-image: url(../../img/TIHO_Web_Ingredient-50.png);
     @extend %bgi;
   }
+
   h4 {
     padding-top: 3rem;
     margin-bottom: 3rem;
@@ -565,9 +599,11 @@ video {
   border: 1px solid #555555;
   background-color: #bbbbbb;
   margin: 0 0.4rem;
+
   &:hover {
     cursor: pointer;
   }
+
   &#question-1,
   &#compare-1,
   &#rules-1,
@@ -581,11 +617,13 @@ video {
   margin-top: 2rem;
   margin-bottom: 1rem;
   letter-spacing: 0.2rem;
-  & > div {
+
+  &>div {
     display: inline-block;
     font-size: 1.6rem;
     padding: 0 2rem;
   }
+
   .devided-line {
     border-right: 2px solid #000;
     padding: 2px;
@@ -601,19 +639,24 @@ video {
 
 .question-content {
   text-align: center;
-  > div {
+
+  >div {
     margin: 0 auto;
     max-width: 50%;
   }
+
   ol {
     list-style: inside decimal;
   }
+
   li {
     margin-bottom: 0.5rem;
   }
+
   .option-2 {
     display: none;
   }
+
   .content-p {
     line-height: 1.5rem;
     letter-spacing: 1px;
@@ -624,10 +667,12 @@ video {
 .compare-block {
   // background-image: url(../../img/TIHO_Web_Ingredient-51.png);
   background: linear-gradient(180deg, $bgSkin 90%, $bgDeep 97%);
+
   &-bgi {
     @extend %bgi; // background-color: $bgSkin;
     position: initial;
   }
+
   img {
     width: 100%;
     max-width: 1680px;
@@ -636,11 +681,13 @@ video {
     left: 0;
     top: -12%;
   }
+
   h4 {
     margin-bottom: 2rem;
     position: relative;
     z-index: 1;
   }
+
   p {
     position: relative;
     z-index: 1;
@@ -651,6 +698,7 @@ video {
   width: fit-content;
   margin: 6rem auto 0rem;
   text-align: left;
+
   table {
     width: 80%;
     margin: 0 auto;
@@ -672,13 +720,16 @@ th {
 tbody {
   tr {
     border-bottom: 1px solid #bbb;
+
     &:last-child {
       border: none;
     }
   }
+
   th {
     padding-right: 48px;
   }
+
   td {
     font-size: 1.2rem;
     padding: 24px 0px 24px 12px;
@@ -689,24 +740,29 @@ tbody {
   color: #fff;
   position: relative;
   background: linear-gradient(180deg, $bgDeep 90%, $bgLight 99%);
+
   &-bgi {
     padding-top: 2rem;
     @extend %bgi;
     background-image: url(../../img/TIHO_Web_Ingredient-10.png);
     opacity: 0;
-    > img {
+
+    >img {
       position: absolute;
       transform: translateX(-50%);
+
       &:first-child {
         width: 85%;
         left: 50%;
         opacity: 0.2;
         top: -20%;
       }
+
       &:nth-child(2) {
         width: 0%;
         top: -20%;
       }
+
       &:nth-child(3) {
         width: 100%;
         top: -20%;
@@ -715,15 +771,19 @@ tbody {
       }
     }
   }
+
   h4 {
     margin-top: 2vh;
   }
+
   .option-text {
     width: 98%;
   }
+
   .devided-line {
     border-color: #fff;
   }
+
   img.option-2 {
     display: none;
   }
@@ -749,8 +809,9 @@ tbody {
 .pie-chart {
   text-align: left;
   position: relative;
+
   img {
-    width: 75%;
+    width: 72%;
     padding-left: 6rem;
     padding-top: 20px;
     padding-bottom: 15vh;
@@ -764,7 +825,7 @@ tbody {
 }
 
 .rules-content {
-  > div {
+  >div {
     margin: 0 auto;
     width: 70%;
     line-height: 2.2rem;
@@ -774,14 +835,17 @@ tbody {
     padding-bottom: 20px;
     position: relative;
   }
-  .option-1 > div:first-child,
-  .option-2 > div:first-child {
+
+  .option-1>div:first-child,
+  .option-2>div:first-child {
     border-bottom: 1px solid #fff;
     padding-bottom: 20px;
   }
+
   .option-2 {
     display: none;
   }
+
   .content-p {
     div:nth-child(2) {
       padding-top: 20px;
@@ -797,11 +861,13 @@ tbody {
   padding: 2.5px 6px;
   top: 18px;
   right: 0;
-  > img {
+
+  >img {
     vertical-align: middle;
     margin-right: 8px;
     width: 28px;
   }
+
   &-card {
     display: none;
     opacity: 0;
@@ -811,6 +877,7 @@ tbody {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.322);
+
     &-inner {
       top: 50%;
       left: 50%;
@@ -821,10 +888,12 @@ tbody {
       background-color: #fff;
       color: #000;
       text-align: center;
+
       h5 {
         margin-top: 8vh;
       }
-      > img {
+
+      >img {
         width: 24px;
         position: absolute;
         top: 12px;
@@ -844,6 +913,7 @@ tbody {
 
 .map-block {
   background: linear-gradient(180deg, $bgLight 50%, $bgSkin 50%);
+
   &-bgi {
     @extend %bgi; // background: linear-gradient(180deg, $bgLight 50%, $bgSkin 50%);
   }
@@ -857,6 +927,7 @@ tbody {
   background-size: contain;
   background-position-x: 50%;
   text-align: center;
+
   img {
     transform: scale(0.85);
     position: relative;
@@ -868,18 +939,23 @@ tbody {
   h4 {
     margin-bottom: 2rem;
   }
+
   .option-title {
     z-index: 2;
     position: relative;
   }
+
   .option-text {
     margin-bottom: 0;
+
     .option-1 {
       padding-left: 0rem;
     }
   }
+
   .team-content {
     position: relative;
+
     .content-p {
       width: 80%;
       margin: auto;
@@ -889,36 +965,44 @@ tbody {
       margin-top: 1.6rem;
       text-align: center;
     }
+
     .option-2 {
       display: none;
     }
-    > img {
+
+    >img {
       position: absolute;
       height: 180px;
       width: 100%;
       transform: translateX(-50%);
+
       &:nth-of-type(1) {
         top: -10vh;
         z-index: 1;
       }
+
       &:nth-of-type(2) {
         bottom: -5vh;
       }
     }
   }
+
   .thum {
     width: 12%;
     margin: 12px;
     display: inline-flex;
     flex-direction: column;
+
     img {
       width: 100%;
       filter: sepia(40%);
     }
+
     p {
       font-size: 14px;
     }
   }
+
   .empty-height {
     height: 100px;
   }
@@ -927,14 +1011,16 @@ tbody {
 .bottom-block {
   position: relative;
   background: linear-gradient(180deg, $bgSkin 70%, #404d61 90%);
-  > div {
+
+  >div {
     h4 {
       letter-spacing: 1px;
       width: 70%;
       margin: 0 auto;
       position: relative;
     }
-    > img {
+
+    >img {
       width: 100%;
       margin-top: -7%;
     }
@@ -946,7 +1032,8 @@ footer {
   bottom: 2rem;
   color: #fff;
   width: 100%;
-  > div {
+
+  >div {
     justify-content: space-between;
     margin: 0 4%;
   }
@@ -955,6 +1042,7 @@ footer {
 .email {
   letter-spacing: 2px;
   margin: auto 0;
+
   img {
     vertical-align: middle;
     width: 30px;
@@ -972,31 +1060,38 @@ footer {
 @media (min-width: 1680px) {
   .block-fixed {
     img {
+
       &:nth-child(2),
       &:nth-child(3) {
         left: 1580px;
       }
     }
   }
+
   .block-top {
     background-size: 1680px;
   }
+
   iframe,
   video {
     height: 600px;
   }
+
   .question-block {
     background-position-y: 105%;
   }
+
   .rules-block {
     padding-bottom: 16rem;
-    > img {
+
+    >img {
       &:nth-child(2) {
         top: -37%;
         height: 40%;
       }
     }
   }
+
   .team-block {
     .team-content {
       .content-p {
@@ -1007,17 +1102,20 @@ footer {
 }
 
 @media (max-width: 1280px) {
+
   iframe,
   video {
     height: 480px;
   }
+
   .rules-block {
-    > img {
+    >img {
       &:nth-child(2) {
         top: -55%;
       }
     }
   }
+
   .map-bgi {
     img {
       transform: scale(0.75);
@@ -1030,7 +1128,7 @@ footer {
 
 @media (max-width: 1024px) {
   .rules-block {
-    > img {
+    >img {
       &:nth-child(2) {
         top: -39%;
       }
@@ -1042,54 +1140,67 @@ footer {
   .phone-appear {
     display: initial;
   }
+
   .non-phone-appear {
     display: none;
   }
+
   .block-fixed {
-    > img:nth-child(2),
+
+    >img:nth-child(2),
     img:nth-child(3) {
       left: 86vw;
       width: 30px;
       margin-top: 20px;
     }
   }
+
   .menu {
     ul {
       width: 80vw;
       left: 20vw;
     }
+
     li {
       padding-top: 4.5vh;
     }
   }
+
   .lang {
     margin-top: 3vh;
   }
+
   .join {
     top: 91vh;
+
     img {
       &:first-child {
         width: 14px;
       }
+
       &:nth-child(2) {
         width: 225px;
       }
     }
   }
+
   .block-top {
     background-image: url(../../img/TIHO_Web_Phone-14-1.png);
     background-size: 109%;
     background-position-x: center;
-    > img {
+
+    >img {
       margin-top: 5rem;
       width: 25%;
     }
   }
+
   .block-top-sec {
     background-image: url(../../img/TIHO_Web_Phone-14.png);
     background-size: 109%;
     background-position-x: center;
   }
+
   .dental-text {
     top: 15%;
     right: 5%;
@@ -1097,36 +1208,45 @@ footer {
     font-size: 1.2rem;
     font-weight: 500;
   }
+
   .large-img {
     .floating-word {
       height: 1200px;
+
       img {
         top: 2%;
       }
     }
   }
+
   .time-count {
-    ul > li {
+    ul>li {
       font-size: 2rem;
       margin: 18% 3% 2%;
+
       &:last-child {
         padding-left: 6%;
       }
     }
+
     p {
       font-size: 0.8rem;
     }
   }
+
   .video-opening {
     height: 120px;
+
     img {
       top: -100%;
     }
   }
+
   .video {
     padding-bottom: 360px;
     background-size: cover;
   }
+
   h4.title {
     font-size: 1rem;
     font-weight: 400;
@@ -1134,14 +1254,17 @@ footer {
     padding-top: 32px;
     margin-bottom: 20px;
   }
+
   .video-block {
     h4.title {
       margin-bottom: 20px;
     }
+
     &-bgi {
       background-image: url(../../img/TIHO_Web_Phone-18.png);
     }
   }
+
   iframe,
   video {
     height: 175px;
@@ -1149,6 +1272,7 @@ footer {
     position: relative;
     top: 120px;
   }
+
   .video-file {
     img {
       &:nth-of-type(1) {
@@ -1156,38 +1280,47 @@ footer {
         width: 55%;
         left: 10%;
       }
+
       &:nth-of-type(2) {
         left: 80%;
         width: 15%;
       }
     }
   }
+
   .about {
     width: 72%;
+
     &-bgi {
       background-image: url(../../img/TIHO_Web_Phone-17.png);
     }
   }
+
   .about-img {
     width: 70%;
     margin: auto;
+
     img {
       width: 40%;
     }
   }
+
   .about-text {
     padding: 8px;
+
     h3 {
       font-size: 17px;
       font-weight: 400;
       margin-bottom: 28px;
     }
+
     p {
       letter-spacing: 0;
       line-height: 0.9rem;
       font-size: 12px;
     }
   }
+
   .content-p {
     font-size: 14px;
     letter-spacing: 1px;
@@ -1195,81 +1328,101 @@ footer {
     line-height: 1.1rem;
     padding-top: 1vh;
   }
+
   .option-text {
     margin-top: 0.9rem;
     margin-bottom: 0.9rem;
-    > div {
+
+    >div {
       font-size: 16px;
       letter-spacing: 0px;
       padding: 0 12px;
     }
+
     .devided-line {
       height: 8px;
     }
   }
+
   .question-block-bgi {
     background-image: url(../../img/TIHO_Web_Ingredient-54-3.png);
   }
+
   .question-content {
-    > div {
+    >div {
       max-width: 80%;
     }
+
     .content-p {
       line-height: 1.1rem;
+
       &.option-1 {
         margin-right: 12px;
       }
     }
+
     ol {
       list-style-position: outside;
     }
+
     li {
       margin-bottom: 0.5vh;
       line-height: 0.9rem;
     }
+
     .option-2 {
       height: 50vh;
       overflow-y: scroll;
     }
   }
+
   .compare-block {
     z-index: 1;
+
     .phone-appear {
       position: relative;
       z-index: 1;
     }
+
     .option-text {
       letter-spacing: 1px;
       text-align: left;
-      > div {
+
+      >div {
         font-size: 13px;
+
         &:first-child {
           padding-right: 0;
           padding-left: 2px;
         }
       }
     }
-    &-bgi > div:last-child {
+
+    &-bgi>div:last-child {
       width: 75%;
       margin: auto;
       text-align: left;
     }
   }
+
   .compare-table {
     position: relative;
     z-index: 1;
     width: 100%;
     margin: 0px auto;
     text-align: left;
+
     .option-2 {
       display: none;
     }
+
     th {
       padding-right: 24px;
       font-size: 14px;
       letter-spacing: 0.9px;
       font-weight: 400;
     }
+
     td {
       font-size: 12px;
       padding: 20px 8px 10px 0px;
@@ -1277,18 +1430,22 @@ footer {
       font-weight: 300;
     }
   }
+
   .rules-block {
     padding-top: 0;
     padding-bottom: 0;
+
     &-bgi {
       background-image: url(../../img/TIHO_Web_Phone-13.png);
     }
-    > img {
+
+    >img {
       &:nth-child(2) {
         top: -140px;
         height: 150px;
         z-index: 1;
       }
+
       &:nth-child(3) {
         opacity: 0.2;
         z-index: 1;
@@ -1296,38 +1453,47 @@ footer {
         width: 100vw;
       }
     }
+
     .d-sm-col-reverse {
       flex-direction: column-reverse;
     }
+
     .f-sm-100 {
       flex: 100;
     }
+
     .option-text {
       margin-top: 2vh;
       width: 100%;
       text-align: left;
-      > div {
+
+      >div {
         &:first-child {
           padding-left: 20px;
           padding-right: 2px;
           margin-left: 0;
         }
+
         &:nth-child(3) {
           padding-left: 2px;
         }
       }
     }
-    .option-title + div {
+
+    .option-title+div {
       height: 75vh;
       overflow-y: scroll;
     }
+
     li {
       margin-bottom: 12px;
+
       &.phone-appear {
         display: block;
       }
     }
   }
+
   .rules-content {
     .content-p {
       line-height: 1rem;
@@ -1335,35 +1501,43 @@ footer {
       letter-spacing: 1px;
     }
   }
+
   .pub-sale {
     padding: 1px 2px;
     font-size: 12px;
     letter-spacing: 0px;
+
     img {
       width: 14px;
       margin-right: 4px;
     }
+
     &-card-inner {
       width: 85vw;
       padding: 0 4px;
+
       h5 {
         margin-bottom: 12px;
         margin-top: 4vh;
       }
     }
   }
+
   .pie-chart img {
     width: 75%;
     padding-left: 3rem;
     padding-top: 0;
+
     &:nth-child(3) {
       left: 10%;
     }
   }
+
   .map-bgi {
     background-image: url(../../img/TIHO_Web_Ingredient-54-phone.png);
     background-size: 150%;
     width: 100%;
+
     img {
       transform: scale(1);
       width: 90%;
@@ -1371,6 +1545,7 @@ footer {
       margin-bottom: 150px;
     }
   }
+
   .team {
     .thum {
       width: 25%;
@@ -1378,24 +1553,29 @@ footer {
       margin: 6px;
     }
   }
+
   .team-block {
     .team-content {
       .content-p {
         height: 70vh;
       }
-      > img {
+
+      >img {
         height: 70px;
+
         &:nth-of-type(1) {
           top: -5vh;
         }
       }
     }
   }
+
   .bottom-block {
-    > div {
-      > img {
+    >div {
+      >img {
         margin-top: 17vh;
       }
+
       h4 {
         width: 100%;
         margin: 8vh auto;
@@ -1404,22 +1584,28 @@ footer {
       }
     }
   }
+
   footer {
     background-color: #404d61;
     padding-bottom: 20px;
   }
+
   .d-sm-col {
     flex-direction: column;
   }
+
   .email {
     margin-bottom: 24px;
+
     p {
       font-size: 14px;
     }
+
     img {
       width: 24px;
     }
   }
+
   .icon img {
     width: 36px;
   }
@@ -1429,36 +1615,45 @@ footer {
   .join {
     top: 94vh;
   }
+
   .block-top {
     background-position-y: 100%;
-    > img {
+
+    >img {
       width: 20%;
     }
   }
+
   .dental-text {
     top: 30%;
     letter-spacing: 0.6rem;
     font-size: 1.6rem;
   }
+
   iframe,
   video {
     height: 360px;
   }
+
   .question-block-bgi {
     background-image: url(../../img/TIHO_Web_Ingredient-50.png);
   }
+
   .question-content {
     .content-p {
+
       &.option-1,
       &.option-2 {
         max-width: 63%;
       }
     }
   }
+
   .map-bgi {
     background-size: contain;
     width: 115%;
     background-position-x: -6vw;
+
     img {
       width: 65%;
       left: -8%;
@@ -1468,17 +1663,19 @@ footer {
 
 @media (max-width: 512px) {
   .opening {
-    > img {
+    >img {
       height: 101vh;
     }
   }
 }
 
 @keyframes fInOut {
+
   0%,
   100% {
     opacity: 0;
   }
+
   25%,
   75% {
     opacity: 1;
@@ -1486,12 +1683,14 @@ footer {
 }
 
 @keyframes float1 {
+
   0%,
   50%,
   100% {
     opacity: 1;
     transform: translate(-50%, -3%);
   }
+
   25%,
   75% {
     opacity: 1;
@@ -1500,12 +1699,14 @@ footer {
 }
 
 @keyframes float2 {
+
   0%,
   50%,
   100% {
     opacity: 1;
     transform: translate(-50%, -5%);
   }
+
   25%,
   75% {
     opacity: 1;
@@ -1514,12 +1715,14 @@ footer {
 }
 
 @keyframes float3 {
+
   0%,
   50%,
   100% {
     opacity: 1;
     transform: translate(-7%, 0%);
   }
+
   25%,
   75% {
     opacity: 1;
@@ -1528,12 +1731,14 @@ footer {
 }
 
 @keyframes float4 {
+
   0%,
   50%,
   100% {
     opacity: 1;
     transform: translate(-9%, 0%);
   }
+
   25%,
   75% {
     opacity: 1;
@@ -1542,12 +1747,14 @@ footer {
 }
 
 @keyframes float5 {
+
   0%,
   50%,
   100% {
     opacity: 0;
     transform: translate(-50%, -175%);
   }
+
   25%,
   75% {
     opacity: 1;
@@ -1556,11 +1763,13 @@ footer {
 }
 
 @keyframes lighterShowing {
+
   0%,
   50%,
   100% {
     filter: invert(0%);
   }
+
   25%,
   75% {
     filter: invert(25%);
