@@ -1072,13 +1072,14 @@ footer {
     margin-top: 2vh;
   }
   .join {
-    top: 91.2vh;
+    top: 92vh;
     img {
       &:first-child {
         width: 14px;
       }
       &:nth-child(2) {
         width: 225px;
+        height: 6vh;
       }
     }
   }
