@@ -1,4 +1,4 @@
-$(window).scroll(function() {
+$(window).scroll(function () {
   //scrollTop觸發
   var winScrollH = $(window).scrollTop()
   var windowH = $(window).height()
@@ -162,7 +162,7 @@ $(window).scroll(function() {
   appear('bottom-block', 8.9, 1.2)
 })
 
-$(document).mouseup(function(e) {
+$(document).mouseup(function (e) {
   var _con = $('#menu')
   if (!_con.is(e.target) && _con.has(e.target).length === 0) {
     $('#menu').hide()
@@ -228,7 +228,7 @@ function calPercentage() {
   $('#percentage').text(p)
 }
 
-$(function() {
+$(function () {
   //menu scrollTo
   var menuLink = [
     '#a-video',
@@ -242,7 +242,7 @@ $(function() {
   for (let index = 0; index < menuLink.length; index++) {
     const element = menuLink[index]
 
-    $('[href="' + element + '"]').click(function(event) {
+    $('[href="' + element + '"]').click(function (event) {
       // event.preventDefault()
       $(document).scrollTo($(element), 800)
     })
@@ -258,25 +258,26 @@ $(function() {
   //     }, 700)
   // });
 
-  $('.menu-btn').click(function() {
+  $('.menu-btn').click(function () {
     $('#menu').show()
   })
-  $('.menu a').click(function() {
+  $('.menu a').click(function () {
     $('#menu').hide()
   })
 
   //影片區球體左移
-  $('.video-file').on('click', function(e) {
-    e.preventDefault()
-    $('.video-file img:nth-of-type(1)').animate(
-      {
-        left: '-9%'
-      },
-      1200
-    )
-    $('iframe').css('pointer-events', 'initial')
-    $('video').css('pointer-events', 'initial')
-  })
+  if ($(window).width() > 600) {
+    $('.video-file').on('click', function (e) {
+      e.preventDefault()
+      $('.video-file img:nth-of-type(1)').animate({
+          left: '-9%'
+        },
+        1200
+      )
+      $('iframe').css('pointer-events', 'initial')
+      $('video').css('pointer-events', 'initial')
+    })
+  }
 
   //關於區圖文切換
   var aboutImgOrigin = [
@@ -305,7 +306,7 @@ $(function() {
   ]
 
   for (let i = 1; i < aboutImg.length + 1; i++) {
-    $('img.about-' + i).click(function() {
+    $('img.about-' + i).click(function () {
       hoverChange(i, 4)
     })
   }
@@ -324,8 +325,7 @@ $(function() {
   }
 
   function hoverShow(e) {
-    e.css('opacity', 0).animate(
-      {
+    e.css('opacity', 0).animate({
         opacity: 1
       },
       500
@@ -337,10 +337,10 @@ $(function() {
   blockInnerSwitch('question', 2, 1)
 
   function blockInnerSwitch(t, i, j) {
-    $('.' + t + ' .option-' + i).click(function() {
+    $('.' + t + ' .option-' + i).click(function () {
       innerSwitch(t, i, j)
     })
-    $('#' + t + '-' + i).click(function() {
+    $('#' + t + '-' + i).click(function () {
       innerSwitch(t, i, j)
     })
 
@@ -375,16 +375,15 @@ $(function() {
   //規則區切換
   blockInnerSwitch('rules', 1, 2)
   blockInnerSwitch('rules', 2, 1)
-  $('.pub-sale').click(function() {
+  $('.pub-sale').click(function () {
     $('.pub-sale-card').css('display', 'block')
-    $('.pub-sale-card').animate(
-      {
+    $('.pub-sale-card').animate({
         opacity: 1
       },
       700
     )
   })
-  $('.pub-close').click(function() {
+  $('.pub-close').click(function () {
     $('.pub-sale-card').css('display', 'none')
   })
 
@@ -392,13 +391,13 @@ $(function() {
   blockInnerSwitch('team', 1, 2)
   blockInnerSwitch('team', 2, 1)
 
-  $('.thum img').mouseover(function() {
+  $('.thum img').mouseover(function () {
     $(this).css('filter', 'sepia(0%)')
     $(this)
       .next('.op0')
       .css('opacity', '1')
   })
-  $('.thum img').mouseout(function() {
+  $('.thum img').mouseout(function () {
     $(this).css('filter', 'sepia(40%)')
     $(this)
       .next('.op0')
