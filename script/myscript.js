@@ -173,7 +173,7 @@ startTime()
 
 function startTime() {
   var today = new Date()
-  var lastday = new Date('Jul 4, 2019 00:00:00')
+  var lastday = new Date('Sep 4, 2019 00:00:00')
   var timeInterval = lastday - today
   var d = Math.floor(timeInterval / (24 * 3600 * 1000))
   var h = Math.floor(timeInterval / (3600 * 1000) - d * 24)
@@ -209,7 +209,7 @@ calPercentage()
 
 function calPercentage() {
   var today = new Date()
-  var lastday = new Date('Dec 24, 2018 00:00:00')
+  var lastday = new Date('Dec 24, 2019 00:00:00')
   var startday = new Date('Aug 25, 2018 00:00:00')
   var timeInterval = today - startday
   var totaltimeInterval = lastday - startday
